@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }body{
+    padding: 0;
+    margin: 0;
+    background-color:#489255;
+    background-image: url(/imgFolder/schoolppp.png);
+    background-size: 200vh;
+    background-repeat: no-repeat;
+}
+.logo{
+    margin: -7rem;
+    width: 50vh;
+    aspect-ratio: 1;
+    padding-bottom:1.5rem;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    gap: var(--2, 2rem);
+}
+.primaryNavigation{
+    text-decoration: none; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+.primary-header{
+    align-items: center;
+    height: 3rem;
+    justify-content: space-between;
+    background-color:#4caf4f;
+    backdrop-filter: blur(6px);
+    height: 70px;
+}
+.primaryNavigation a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+    padding-right: 10px;
+}
+.primaryNavigation li :hover{
+    color:rgb(0, 12, 0);
+    }
+.container{
+    padding-top: 3rem;
+    display: flex;
+    justify-self: center;
+    align-content: center;
+}
+.maincontent{
+    padding: 45px;
+    color: white;
+    width: 65rem;
+    height: 75vh;
+    background-color: #4caf4fa9;
+}
+.abtustxt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+.abtus{
+    font-size: medium;
+    padding: 2%;
+}
