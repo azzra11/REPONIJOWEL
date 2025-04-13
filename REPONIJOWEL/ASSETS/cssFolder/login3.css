@@ -28,7 +28,7 @@
     object-fit: cover;
   }
   .logo {
-    height: 150px;     /* make it shorter — adjust as needed */
+    height: 80px;     /* make it shorter — adjust as needed */
     width: auto;       /* maintain aspect ratio */
     display: block;
     margin: 0 auto 20px auto;
@@ -47,12 +47,12 @@
     padding: 50px;
     width: 80%;
     border-radius: 30px;
-    backdrop-filter: blur(5px); /* optional: gives a nice frosted-glass effect */
+    backdrop-filter: blur(1px); /* blur adjusment */
   }
   
   
   .overlay h1 {
-    font-size: 3.0rem;
+    font-size: 1.5rem;
     text-shadow: 1px 1px 5px #000;
   }
   
@@ -69,7 +69,7 @@
   }
   
   .right-panel-content {
-    margin-top: 100px; /* 👈 Adjust as needed to move content down */
+    margin-top: 40px; /* 👈 Adjustment to move content down */
   }
   
   
@@ -91,7 +91,7 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 500px; /* smaller width */
+    width: 400px; /* smaller width */
     height: 2px;
     background-color: white;
   }
@@ -121,12 +121,12 @@
   
   input[type="email"],
   input[type="password"] {
-    width: 50%;
+    width: 60%;
     padding: 10px 20px;
-    border-radius: 30px;
+    border-radius: 60px;
     border: none;
     margin: 10px auto 20px auto;
-    font-size: 1.3rem;
+    font-size: 1rem;
     display: block;
   
   
@@ -136,11 +136,12 @@
     display: flex;
     justify-content: center;  /* Center horizontally */
     align-items: center;
-    gap: 20px;                 /* Space between the label and the link */
-    font-size: 0.9rem;
+    gap: 10px;                 /* Space between the label and the link */
+    font-size: 0.8rem;
     margin-bottom: 20px;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
+  
   }
   
   .options a {
@@ -149,13 +150,13 @@
   }
   
   button {
-    width: 40%; 
+    width: 60%; 
     background-color: white;
     color: #4CAF50;
     padding: 15px;
     border: none;
-    border-radius: 30px;
-    font-size: 1.3rem;
+    border-radius: 60px;
+    font-size: 1.rem;
     cursor: pointer;
     margin-bottom: 15px;
     font-weight: bold;
@@ -164,16 +165,16 @@
   }
   
   .signup-text {
-    font-size: 1.3rem;
+    font-size: 0.7rem;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 5px;
     align-self: center; /* Helps center inside flex container */
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
   }
   
   .socials {
-    margin-top: 160px;
+    margin-top: 10px;
     display: flex;
     gap: 130px;
     justify-content: center;
@@ -188,7 +189,7 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 600px; /* adjust width if needed */
+    width: 400px; /* adjust width if needed */
     height: 2px;
     background-color: white;
   }
