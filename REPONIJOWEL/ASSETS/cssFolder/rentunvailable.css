@@ -58,6 +58,9 @@
   flex-direction: column;
   align-items: flex-start; /* moves buttons to the left */
   gap: 12px;
+  background-color: #388e3c;
+    border-radius: 20px;
+    padding: 15px;
   }
   
  .available-btn {
@@ -69,7 +72,9 @@
   width: 180px;                 /* wider buttons */
   font-size: 17px;              /* slightly bigger text */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
+  
+
+}
   
   
   

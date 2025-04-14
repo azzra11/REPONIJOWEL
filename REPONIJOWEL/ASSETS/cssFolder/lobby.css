@@ -1,0 +1,220 @@
+
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('/REPONIJOWEL/ASSETS/imgFolder/schoolppp.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    background-color: #489255;
+    text-shadow: 1px 1px 5px #000;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+
+  .logo {
+    height: 60px;
+    margin-right: 15px;
+  }
+  
+  .container {
+    display: flex;
+    padding: 20px;
+  gap: 8px; /* Reduced from 20px to bring elements closer */
+  justify-content: space-between;
+  align-items: flex-start;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .profile {
+    background-color: #489255;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .avatar {
+    font-size: 30px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid white; /* line sa baba */
+    padding-bottom: 10px; /* line sa baba */
+  }
+  
+  .category-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    align-items: center;
+    margin-top: 8px;
+    background-color: #489255;
+    color: #222;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;    
+  }
+  
+  .cat-btn {
+    background-color: white;
+    color: #388e3c;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 140px;
+    text-align: center;
+    height: 60px;
+  }
+  
+  .cat-btn:hover {
+    background-color: #d4ffd4;
+    transform: scale(1.05);
+    color: #2e7031;
+  }
+  
+  .button h3 {
+    color: white;
+    margin-top: 0;
+    font-size: 18px;
+    text-align: center;
+    border-bottom: 2px solid white; /* line sa baba */
+    padding-bottom: 10px; /* line sa baba */
+  } 
+  
+
+  
+  .live-status {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 12px;
+    color: #d4ffd4;
+  }
+  
+  /* Main Section */
+
+  .main-content {              
+    background-color: #489255;
+    padding: 20px;
+    border-radius: 20px;
+    width: 70%; /* pinalapad yung gitna */
+    margin: 20px auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-top: 0px;     /* or a smaller value like 10px */
+    padding-top: 10px;
+  }
+  
+  .main-content h2 {
+    margin-top: 0;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+  }
+  
+  .book-list {                
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    color: #489255;
+    height: 540px;
+    
+  }
+
+  .book-button {
+    background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  }
+  
+  .book-button:hover {
+    background-color: #45a049;
+  }
+  
+  .book-title {
+    background-color: #489255;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+  
+  /* Info Panels */
+  .info-panels {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+  
+  .panel {
+    background-color: #489255;
+    border-radius: 20px;
+    padding: 15px;
+    width: 180px;
+    text-align: center;
+  }
+  
+  .panel h3 {
+    margin-top: 0;
+    font-size: 16px;
+    border-bottom: 2px solid white; /* line sa baba */
+    padding-bottom: 10px; /* line sa baba */
+  }
+
+  .panel h4 {
+    margin-top: 0;
+    font-size: 16px;
+    border-bottom: 2px solid white; /* line sa baba */
+    padding-bottom: 10px; /* line sa baba */
+  }
+
+  
+  .books-due .content {
+    background-color: white;
+    height: 242px;
+    border-radius: 20px;
+  }
+  
+  .books-borrowed p {
+    font-size: 14px;
+    margin: 10px 0;
+    background-color: white;
+    height: 242px;
+    border-radius: 20px;
+    color: #489255;
+  }
+  
+  .books-borrowed hr {
+    width: 60%;
+    margin: auto;
+  }
