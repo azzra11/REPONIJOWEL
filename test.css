@@ -1,0 +1,284 @@
+/* server.css */
+
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #005792;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-container p {
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 250px;
+  height: calc(100% - 60px);
+  background-color: #003b5b;
+  color: #fff;
+  padding-top: 20px;
+}
+
+.admincontiner {
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.admin-profile p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.sidebar-container .nav ul {
+  list-style-type: none;
+}
+
+.sidebar-container .nav ul li {
+  margin: 10px 0;
+}
+
+.sidebar-container .nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-container .nav ul li a:hover {
+  background-color: #0074a6;
+}
+
+/* Main Content */
+main.container {
+  margin-left: 250px;
+  margin-top: 60px;
+  padding: 30px;
+  width: calc(100% - 250px);
+  min-height: calc(100vh - 60px);
+  background-color: #ffffff;
+}
+
+.maincontent .contentarea h1 {
+  font-size: 24px;
+  color: #005792;
+  margin-bottom: 10px;
+}
+
+.maincontent .contentarea hr {
+  border: 0;
+  height: 2px;
+  background-color: #005792;
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  main.container {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header, .sidebar, main.container {
+    position: relative;
+    width: 100%;
+    margin: 0;
+  }
+
+  .sidebar {
+    height: auto;
+    padding: 10px;
+  }
+
+  main.container {
+    padding: 20px;
+  }
+}
+/* server.css */
+
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #005792;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-container p {
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 250px;
+  height: calc(100% - 60px);
+  background-color: #003b5b;
+  color: #fff;
+  padding-top: 20px;
+}
+
+.admincontiner {
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.admin-profile p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.sidebar-container .nav ul {
+  list-style-type: none;
+}
+
+.sidebar-container .nav ul li {
+  margin: 10px 0;
+}
+
+.sidebar-container .nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-container .nav ul li a:hover {
+  background-color: #0074a6;
+}
+
+/* Main Content */
+main.container {
+  margin-left: 250px;
+  margin-top: 60px;
+  padding: 30px;
+  width: calc(100% - 250px);
+  min-height: calc(100vh - 60px);
+  background-color: #ffffff;
+}
+
+.maincontent .contentarea h1 {
+  font-size: 24px;
+  color: #005792;
+  margin-bottom: 10px;
+}
+
+.maincontent .contentarea hr {
+  border: 0;
+  height: 2px;
+  background-color: #005792;
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  main.container {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header, .sidebar, main.container {
+    position: relative;
+    width: 100%;
+    margin: 0;
+  }
+
+  .sidebar {
+    height: auto;
+    padding: 10px;
+  }
+
+  main.container {
+    padding: 20px;
+  }
+}
