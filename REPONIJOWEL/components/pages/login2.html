@@ -43,6 +43,14 @@
           </a>
 
         </form>
+        <script>
+          const checkbox = document.getElementById("show-password");
+          const passwordInput = document.getElementById("password");
+        
+          checkbox.addEventListener("change", function () {
+            passwordInput.type = this.checked ? "text" : "password";
+          });
+        </script>
         <div class="socials">
           <a href="#"><img src="/REPONIJOWEL/ASSETS/imgFolder/gmaili.png" alt="Gmail"/></a>
           <a href="#"><img src="/REPONIJOWEL/ASSETS/imgFolder/facebookicon.png" alt="Facebook"/></a>
