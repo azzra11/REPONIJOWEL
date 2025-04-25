@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <title>admin modal</title>
+  <style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        text-shadow: 1px 1px 5px #000;
+      background-color: #e9f0e6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .modal {
+      background-color: #4f8a42;
+      color: white;
+      padding: 30px 40px;
+      border-radius: 20px;
+      width: 350px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .modal label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    .modal input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .modal input[readonly] {
+      background-color: white;
+      color: #333;
+    }
+
+    .modal button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      width: 100%;
+      border: none;
+      border-radius: 20px;
+      background-color: white;
+      color: #4f8a42;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+    }
+
+    .modal button:hover {
+      background-color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="modal">
+  <h2>Southern Philippines Institute of Science & Technology</h2>
+
+  <label for="fullname">Full name :</label>
+  <input type="text" id="fullname" name="fullname">
+
+
+  <label for="username">Username :</label>
+  <input type="text" id="username" name="username">
+
+  <label for="school-position">School position :</label>
+  <input type="text" id="school-position" name="school-position">
+
+  <label for="email">Email :</label>
+  <input type="email" id="email" name="email">
+
+  <label for="password">Password :</label>
+  <input type="password" id="password" name="password">
+
+  <button type="submit">Done</button>
+</div>
+
+</body>
+</html>
