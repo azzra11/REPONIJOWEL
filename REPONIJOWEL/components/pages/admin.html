@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" href="/REPONIJOWEL/ASSETS/imgFolder/school-logo-large.png" />
 
   <!--  CSS -->
-  <link rel="stylesheet" href="/REPONIJOWEL/ASSETS/cssFolder/server.css" />
+  <link rel="stylesheet" href="/REPONIJOWEL/ASSETS/cssFolder/admin.css" />
 
   <!-- Google Material Symbols -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
@@ -61,41 +61,64 @@
     </div>
   </aside> 
   <main class="container">
+    <!-- Start of maincontent -->
       <div class="maincontent">    
-          <div class="contentarea">
-            <h1>User:</h1>
-            <div class="fnctiondiv">
-              <div class="Email-container">
-                <input type="text" placeholder="Studentemail" />
-              </div> 
-               <div class="search-container">
-                  <input type="text" placeholder="Search..." />
-                  <button class="search-button" onclick="" >Search</button>
-              </div>
-            </div>
-            <div class="spacecontainer">
+
+    <!-- start of adminprofile -->
+        <div class="adminprofile">
+          <h1>Admin Profile</h1>
+
+    <!-- start of adminprofilebtn -->
+        <div class="adminprofilebtn">
+          <button class="add-admin"><span class="material-symbols-outlined">person_add</span><p>Add Admin</p></button>
+        </div>
+    <!-- end of adminprofilebtn -->
+
+        </div>
+    <!-- end of adminprofile -->
+
+    <!-- start of Spacee div -->
+          <div class="spacecontainer">
             <div class="spacerdiv"></div>
           </div>
-            <div class="table-wrapper">
-              <table class="user-table">
-                <thead>
-                  <tr>
-                    <td>Name </td>
-                    <td>Student id</td>
-                    <td>Course&Year</td>
-                    <td>Rented books</td>
-                    <td>Books title</td>
-                    <td>Date to return</td>
-                  </tr>
-                </thead onclick="">
-                <tbody>
-                  <tr> 
-                  </tr>
-                </tbody>
-              </table>
-            </div>            
-          </div>
+    <!-- end of Spacee div -->
+
+    <!--start of table-wrappper -->
+      <div class="table-wrappper">
+    <!-- start of  table -->
+    <div class="table-wrapper">
+      <table class="user-table">
+        <thead>
+          <tr>
+            <td>Admin id </td>
+            <td>Admin name </td>
+            <td>Admin permission</td>
+            <td>Username</td>
+            <td>School position</td>
+            <td>Action</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr> 
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <button class="btn edit-btn">Edit</button>
+              <button class="btn delete-btn">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>   
+    <!-- end of table -->
       </div>
+    <!-- end of table  -->
+
+      </div>
+    <!-- end of maincontent -->
   </main>
 </body>
 </html>
