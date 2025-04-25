@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <title>Book Modal</title>
+  <style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        text-shadow: 1px 1px 5px #000;
+      background-color: #e9f0e6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .modal {
+      background-color: #4f8a42;
+      color: white;
+      padding: 30px 40px;
+      border-radius: 20px;
+      width: 350px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .modal label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    .modal input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .modal input, .modal select {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .modal button {
+      flex: 1;
+      padding: 10px 0;
+      border: none;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+
+    }
+
+    .submit-btn {
+      background-color: white;
+      color: #4f8a42;
+
+    }
+
+    .submit-btn:hover {
+      background-color: #e0e0e0;
+    }
+
+    .delete-btn {
+      background-color: #ff4d4d;
+      color: white;
+        text-shadow: 1px 1px 5px #000;
+    }
+
+    .delete-btn:hover {
+      background-color: #e60000;
+    }
+  </style>
+</head>
+<body>
+
+<div class="modal">
+  <h2>Southern Philippines Institute of Science & Technology</h2>
+
+  <label for="booktitle">Book <Title></Title> :</label>
+  <input type="text" id="booktitle" name="booktitle">
+
+  <label for="bookid"> Book ID :</label>
+  <input type="text" id="bookid" name="bookid">
+
+  <label for="bookgenre">Book Genre:</label>
+  <input type="text" id="bookgenre" name="bookgenre">
+
+  <label for="bookstatus">Book Status :</label>
+  <select id="bookstatus" name="bookstatus">
+    <option>Available</option>
+    <option>Unavailable</option>
+  </select>
+
+  <label for="rentedby">Rented By :</label>
+  <input type="text" id="rentedby" name="rentedby">
+
+  <div class="button-group">
+    <button type="button" class="delete-btn">Delete</button>
+    <button type="submit" class="submit-btn">Done</button>
+  </div>
+</div>
+
+</body>
+</html>

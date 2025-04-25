@@ -137,7 +137,7 @@ input[type="password"] {
   justify-content: center;  /* Center horizontally */
   align-items: center;
   gap: 10px;                 /* Space between the label and the link */
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   margin-bottom: 20px;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
@@ -162,15 +162,23 @@ button {
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
   margin: 10px auto 20px auto;
+  font-size: 0.9rem;
 }
 
-.signup-text {
-  font-size: 0.7rem;
+.signup {
+  font-size: 0.9rem;
   text-align: center;
   margin-top: 5px;
   align-self: center; /* Helps center inside flex container */
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
+  color: white;
+  text-decoration: underline;
+}
+
+.signup a {
+  color: white;
+  text-decoration: underline;
 }
 
 .socials {

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Logout Modal</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Modal overlay */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Modal box */
+    .modal {
+      background: white;
+      border: 6px solid #3f9142;
+      border-radius: 40px;
+      padding: 30px;
+      text-align: center;
+      max-width: 400px;
+    }
+
+    .modal p {
+      font-size: 20px;
+      color: #3f9142;
+      margin-bottom: 20px;
+    }
+
+    .modal-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .modal button {
+      background-color: #3f9142;
+      color: white;
+      border: none;
+      padding: 10px 30px;
+      font-size: 16px;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    .modal button:hover {
+      background-color: #357d38;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Trigger Button -->
+<button onclick="showModal()">Log Out</button>
+
+<!-- Modal Structure -->
+<div class="modal-overlay" id="logoutModal">
+  <div class="modal">
+    <p>Are sure you want to log out ?</p>
+    <div class="modal-buttons">
+      <button onclick="logout()">Yes</button>
+      <button onclick="closeModal()">No</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function showModal() {
+    document.getElementById('logoutModal').style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.getElementById('logoutModal').style.display = 'none';
+  }
+
+  function logout() {
+    alert("Logging out...");
+    closeModal();
+    // Add logout logic here
+  }
+</script>
+
+</body>
+</html>

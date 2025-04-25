@@ -29,15 +29,34 @@
           <hr class="small-line">
           <h2>SPIST LIBRARY</h2>
         </div>
-        
-    <button>Log in as a Student</button>
-    <button>Log in as a Admin</button>
-    <button>Sign in</button>
+        <button onclick="login()" class="login">
+          <i class="fas fa-sign-in-alt"></i> Log in as a Student
+        </button>
+        <button onclick="admin()" class="login">
+          <i class="fas fa-sign-in-alt"></i> Log in as a Admin
+        </button>
+        <button onclick="signup()" class="signup">
+          </i> Sign Up
+        </button>
     <div class="social-icons">
       <a href="#"><img src="/REPONIJOWEL/ASSETS/imgFolder/gmaili.png" alt="Gmail"/></a>
-      <a href="#"><img src="/REPONIJOWEL/ASSETS/imgFolder/facebookicon.png" alt="Facebook"/></a>
-      <a href="#"><img src="/REPONIJOWEL/ASSETS/imgFolder/igicon.png" alt="Instagram"/></a>
+      <a href="https://www.facebook.com/spistofficial"><img src="/REPONIJOWEL/ASSETS/imgFolder/facebookicon.png" alt="Facebook"/></a>
+      <a href="https://www.instagram.com/spistofficial/?hl=en"><img src="/REPONIJOWEL/ASSETS/imgFolder/igicon.png" alt="Instagram"/></a>
     </div>
   </div>
+
+  <script>
+    function login() {
+  window.location.href ="/REPONIJOWEL/components/pages/login2.html";
+}
+
+function admin() {
+  window.location.href ="/REPONIJOWEL/components/pages/login3.html";
+}
+
+function signup() {
+  window.location.href ="/REPONIJOWEL/components/pages/login4.html";
+}
+  </script>
 </body>
 </html>
