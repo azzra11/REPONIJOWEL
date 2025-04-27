@@ -2,163 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Table with Buttons</title>
+  <title>Center Card</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center;     /* Center vertically */
+      background: #f0f0f0;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-
-    th, td {
-      border: 1px solid #ddd;
-      padding: 12px;
-      text-align: center;
-    }
-
-    th {
-      background-color: #f4f4f4;
-    }
-
-    .btn {
-      padding: 6px 12px;
-      margin: 2px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      color: white;
-    }
-
-    .edit-btn {
+    .card {
+      width: 380px;
+      height: 316px;
       background-color: #4CAF50;
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
     }
 
-    .delete-btn {
-      background-color: #f44336;
+    .icon {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 60px;
+      height: 60px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    .btn:hover {
-      opacity: 0.8;
+    .icon img {
+      width: 30px;
+      height: 30px;
     }
   </style>
 </head>
 <body>
 
-  <h2>Table with Buttons</h2>
+<div class="card">
+  <div class="icon">
+    <img src="/mnt/data/9f79f74e-362e-4796-b0de-08c9a09597dc.png" alt="Profile Icon">
+  </div>
+</div>
 
-  <table>
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>John Doe</td>
-        <td>
-          <button class="btn edit-btn">Edit</button>
-          <button class="btn delete-btn">Delete</button>
-        </td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Jane Smith</td>
-        <td>
-          <button class="btn edit-btn">Edit</button>
-          <button class="btn delete-btn">Delete</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Table with Buttons</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-
-    th, td {
-      border: 1px solid #ddd;
-      padding: 12px;
-      text-align: center;
-    }
-
-    th {
-      background-color: #f4f4f4;
-    }
-
-    .btn {
-      padding: 6px 12px;
-      margin: 2px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      color: white;
-    }
-
-    .edit-btn {
-      background-color: #4CAF50;
-    }
-
-    .delete-btn {
-      background-color: #f44336;
-    }
-
-    .btn:hover {
-      opacity: 0.8;
-    }
-  </style>
-</head>
-<body>
-
-  <h2>Table with Buttons</h2>
-
-  <table>
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>John Doe</td>
-        <td>
-          <button class="btn edit-btn">Edit</button>
-          <button class="btn delete-btn">Delete</button>
-        </td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Jane Smith</td>
-        <td>
-          <button class="btn edit-btn">Edit</button>
-          <button class="btn delete-btn">Delete</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
 </body>
 </html>
