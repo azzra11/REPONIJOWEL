@@ -1,73 +1,132 @@
+/* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }body{
+  }
+  
+  body {
     padding: 0;
     margin: 0;
-    background-color:#489255;
+    background-color: #489255;
     background-image: url(/REPONIJOWEL/ASSETS/imgFolder/schoolppp.png);
     background-size: 200vh;
     background-repeat: no-repeat;
-}
-.logo{
+    animation: fadeIn 2s ease-in-out; /* Fade-in animation for the body */
+    animation: backgroundZoom 40s infinite alternate, fadeIn 2s ease-in-out; /* Added zoom effect and fade-in */
+  }
+  
+  .logo {
     margin: -7rem;
     width: 50vh;
     aspect-ratio: 1;
-    padding-bottom:1.5rem;
-}
-.flex{
+    padding-bottom: 1.5rem;
+    animation: fadeIn 2s ease-in-out; /* Fade-in animation for the logo */
+  }
+  
+  .flex {
     display: flex;
     align-items: center;
     gap: var(--2, 2rem);
-}
-.primaryNavigation{
-    text-decoration: none; 
+  }
+  
+  .primaryNavigation {
+    text-decoration: none;
     list-style: none;
     padding: 0;
     margin: 0;
     align-items: center;
-}
-.primary-header{
+  }
+  
+  .primary-header {
     align-items: center;
     height: 3rem;
     justify-content: space-between;
-    background-color:#4caf4f;
+    background-color: #4caf4f;
     backdrop-filter: blur(6px);
     height: 70px;
-}
-.primaryNavigation a {
+    animation: slideIn 1s ease-in-out; /* Slide-in animation for the header */
+  }
+  
+  .primaryNavigation a {
     color: white;
     text-decoration: none;
     font-size: 1.1rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    transition: color 0.3s ease;
-    padding-right: 10px;
-}
-.primaryNavigation li :hover{
-    background-color: wheat;
-    }
-.container{
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+    padding: 10px 15px;
+    border-radius: 50rem;
+  }
+  
+  .primaryNavigation a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background on hover */
+    color: #4CAF50; /* Change text color on hover */
+    transform: scale(1.1); /* Scale up on hover */
+  }
+  
+  .container {
     padding-top: 3rem;
     display: block;
     justify-self: center;
     align-content: center;
-}
-.maincontent{
+    animation: fadeIn 2s ease-in-out; /* Fade-in animation for the container */
+  }
+  
+  .maincontent {
     padding: 45px;
     color: white;
     width: 65rem;
     height: 75vh;
     background-color: #4caf4fa9;
-}
-.visiontxt{
+    animation: fadeIn 2s ease-in-out; /* Fade-in animation for the main content */
+  }
+  
+  .visiontxt {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 40px;
-}
-.vtxt{
+    animation: fadeIn 2s ease-in-out; /* Fade-in animation for the vision text */
+  }
+  
+  .vtxt {
     padding: 2%;
-}
+    animation: fadeIn 2s ease-in-out; /* Fade-in animation for the vision text content */
+  }
+  
+  /* Keyframes for animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes backgroundZoom {
+    from {
+      background-size: 100%; /* Initial background size */
+    }
+    to {
+      background-size: 110%; /* Zoomed background size */
+    }
+  }
+  
+  /* Fade-out effect for page transitions */
+  .fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
