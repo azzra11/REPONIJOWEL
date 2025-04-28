@@ -2,10 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }body{
+  }
+  body{
     padding: 0;
     margin: 0;
-    background-color:#4caf4f56;
+    background-color:#489255;
     background-image: url(/REPONIJOWEL/ASSETS/imgFolder/schoolppp.png);
     background-size: 210vh;
     background-repeat: no-repeat;

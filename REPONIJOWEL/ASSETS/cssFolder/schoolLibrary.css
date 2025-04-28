@@ -6,6 +6,9 @@
     padding: 0;
     margin: 0;
     background-color:#489255;
+    background-image: url(/REPONIJOWEL/ASSETS/imgFolder/schoolppp.png);
+    background-size: 210vh;
+    background-repeat: no-repeat;
 }
 .logo{
     margin: -7rem;
@@ -53,7 +56,6 @@
     justify-content: center;
     align-items: center;
     min-height: 88vh;
-    background: url(/REPONIJOWEL/ASSETS/imgFolder/schoolppp.png) no-repeat center center;
     background-size: 100rem;
 }
 .maincontent{

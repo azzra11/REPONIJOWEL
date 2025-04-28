@@ -8,6 +8,9 @@
     padding: 0;
     margin: 0;
     background-color:#489255;
+    background-image: url(/REPONIJOWEL/ASSETS/imgFolder/schoolppp.png);
+    background-size: 210vh;
+    background-repeat: no-repeat;
 }
 .logo{
     margin: -7rem;
@@ -53,21 +56,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 60vh;
-    background: url(/REPONIJOWEL/ASSETS/imgFolder/schoolppp.png) no-repeat center center;
-    background-size: 100rem;
-    padding-bottom: 3rem;
-}
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    min-height: 80vh;
-    background-color: #489255;
-    padding-bottom: 10rem;
+    padding: 80px;
   }
-  
   .iconcontainer {
     background-color: #48925694;
     padding: 2rem;
@@ -75,7 +65,7 @@
     color: white;
     max-width: 1000px;
     width: 200%;
-    height: 25rem;
+    height: 350px;
   }
   
   .ctus {
@@ -90,7 +80,6 @@
     gap: 1rem;
     margin: 1rem 0;
   }
-  
   .contact-icon {
     width: 32px;
     height: 32px;
