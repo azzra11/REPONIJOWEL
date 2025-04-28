@@ -9,17 +9,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Roboto', sans-serif; 
+      font-family: 'Roboto', sans-serif;
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    input[type="email"],
+    input[type="password"],
+    input[type="text"] {
+      width: 60%;
+      padding: 10px 20px;
+      border-radius: 60px;
+      border: none;
+      margin: 10px auto 20px auto;
+      font-size: 1rem;
+      display: block;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="left-panel">
-      <img src="/REPONIJOWEL/ASSETS/imgFolder/schoolppp.png" alt="SPIST Building" class="background-img"> <!-- Give a class -->
+      <img src="/REPONIJOWEL/ASSETS/imgFolder/schoolppp.png" alt="SPIST Building" class="background-img">
       <div class="overlay">
-        <img src="/REPONIJOWEL/ASSETS/imgFolder/school-logo-large.png" alt="SPIST Logo" class="logo"> <!-- Keep logo separate -->
+        <img src="/REPONIJOWEL/ASSETS/imgFolder/school-logo-large.png" alt="SPIST Logo" class="logo">
         <h1>Southern Philippines Institute<br>of Science & Technology <br>Library</h1>
       </div>
     </div>
@@ -29,21 +40,18 @@
           <hr class="small-line">
           <h2>SPIST LIBRARY</h2>
         </div>
-        <form>
+        <form onsubmit="handleSubmit(event)">
           <input type="email" placeholder="Email" required>
-          <input type="password" placeholder="Password" required>
+          <input type="password" id="password" placeholder="Password" required>
           <div class="options">
-            <label><input type="checkbox"> Show Password</label>
+            <label><input type="checkbox" id="showPassword"> Show Password</label>
             <a href="#">Forgot Password</a>
           </div>
           <button type="submit">Log in as Student</button>
-
-          <a href="/REPONIJOWEL/components/modals/login4.html" class="signup">
-            <i class="fas fa-sign-up-alt"></i> Dont Have An Account?
-          </a>
-
         </form>
-        
+        <a href="#" class="signup" onclick="redirectToSignup(event)">
+          <i class="fas fa-sign-up-alt"></i> Don't Have An Account?
+        </a>
         <div class="socials">
           <a href="#"><img src="/REPONIJOWEL/ASSETS/imgFolder/gmaili.png" alt="Gmail"/></a>
           <a href="#"><img src="/REPONIJOWEL/ASSETS/imgFolder/facebookicon.png" alt="Facebook"/></a>
@@ -51,5 +59,38 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      form.classList.add('fade-out');
+
+      setTimeout(() => {
+        window.location.href = "/REPONIJOWEL/components/modals/login3.html"; // Redirect to the desired page
+      }, 500); // Match this duration with the CSS transition duration
+    }
+
+    function redirectToSignup(event) {
+      event.preventDefault();
+      const signupLink = event.target;
+      signupLink.classList.add('fade-out');
+
+      setTimeout(() => {
+        window.location.href = "/REPONIJOWEL/components/modals/login4.html"; // Redirect to the desired page
+      }, 500); // Match this duration with the CSS transition duration
+    }
+
+    // Function to toggle password visibility
+    document.getElementById('showPassword').addEventListener('change', function() {
+      const passwordField = document.getElementById('password');
+      if (this.checked) {
+        passwordField.type = 'text';
+      } else {
+        passwordField.type = 'password';
+      }
+    });
+  </script>
 </body>
 </html>

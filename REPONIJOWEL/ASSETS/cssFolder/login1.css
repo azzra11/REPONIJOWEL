@@ -1,4 +1,5 @@
-* * {
+/* Reset and base styles */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -6,10 +7,9 @@
 }
 
 body, html {
-  height: 80%;
+  height: 100%;
   width: 100%;
 }
-
 
 .container {
   display: flex;
@@ -20,15 +20,20 @@ body, html {
 .left-panel {
   flex: 3;
   position: relative;
-  
+  overflow: hidden; /* Ensure the zoom effect doesn't overflow */
 }
 
 .left-panel .background-img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  
+  transition: transform 5s ease-in-out; /* Zoom effect */
 }
+
+.left-panel:hover .background-img {
+  transform: scale(1.1); /* Zoom in on hover */
+}
+
 .logo {
   height: 80px;     /* make it shorter — adjust as needed */
   width: auto;       /* maintain aspect ratio */
@@ -44,14 +49,20 @@ body, html {
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
-
   background-color: rgba(255, 255, 255, 0.2); /* 👈 soft white background */
   padding: 50px;
   width: 80%;
   border-radius: 30px;
   backdrop-filter: blur(1px); /* blur adjusment */
+  opacity: 0; /* Initial state for fade-in */
+  animation: fadeIn 2s forwards; /* Fade-in animation */
 }
 
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
 
 .overlay h1 {
   font-size: 1.5rem;
@@ -66,7 +77,6 @@ body, html {
   flex-direction: column;
   justify-content: center;
   color: white;
-
 }
 
 .right-panel-content {
@@ -81,7 +91,6 @@ body, html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   position: relative;
   margin-bottom: 10px;
   padding-top: 20px;
@@ -129,13 +138,20 @@ body, html {
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, opacity 0.5s ease; /* Added opacity transition */
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
 }
 
 .right-panel button:hover {
   background-color: wheat;
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+/* Fade-out effect */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 /* adjusment  for left content */
@@ -171,4 +187,9 @@ body, html {
   width: 30px;
   height: 30px;
   cursor: pointer;
+  transition: transform 0.3s ease; /* Added transform transition */
+}
+
+.social-icons img:hover {
+  transform: scale(1.2); /* Bounce effect on hover */
 }

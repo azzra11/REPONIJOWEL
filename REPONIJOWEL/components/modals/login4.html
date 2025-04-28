@@ -7,14 +7,13 @@
   <link rel="icon" type="image/png" href="/REPONIJOWEL/ASSETS/imgFolder/school-logo-large.png" />
   <link rel="stylesheet" href="/REPONIJOWEL/ASSETS/cssFolder/login4.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  
 </head>
 <body>
   <div class="container">
     <div class="left-panel">
-      <img src="/REPONIJOWEL/ASSETS/imgFolder/schoolppp.png" alt="SPIST Building" class="background-img"> <!-- Give a class -->
+      <img src="/REPONIJOWEL/ASSETS/imgFolder/schoolppp.png" alt="SPIST Building" class="background-img">
       <div class="overlay">
-        <img src="/REPONIJOWEL/ASSETS/imgFolder/school-logo-large.png" alt="SPIST Logo" class="logo"> <!-- Keep logo separate -->
+        <img src="/REPONIJOWEL/ASSETS/imgFolder/school-logo-large.png" alt="SPIST Logo" class="logo">
         <h1>Southern Philippines Institute<br>of Science & Technology <br>Library</h1>
       </div>
     </div>
@@ -24,20 +23,19 @@
           <hr class="small-line">
           <h2>SPIST LIBRARY</h2>
         </div>
-        <form>
-            <input type="name" placeholder="Name" required>
-            <input type="student" placeholder="Student ID" required>
-            <input type="course" placeholder="Course & Year" required>
+        <form onsubmit="handleSubmit(event)">
+          <input type="name" placeholder="Name" required>
+          <input type="student" placeholder="Student ID" required>
+          <input type="course" placeholder="Course & Year" required>
           <input type="email" placeholder="Email" required>
-          <input type="password" placeholder="Password" required>
+          <input type="password" id="password" placeholder="Password" required>
           <div class="options">
-            <label><input type="checkbox"> Show Password</label>
-        
+            <label><input type="checkbox" id="showPassword"> Show Password</label>
           </div>
           <button type="submit">Create An Account</button>
           <div class="optionss">
-            <a href="/REPONIJOWEL/components/modals/login1.html" class="signup">
-               Already Have An Account?
+            <a href="#" class="signup" onclick="redirectToLogin(event)">
+              Already Have An Account?
             </a>
           </div>
         </form>
@@ -48,5 +46,38 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      form.classList.add('fade-out');
+
+      setTimeout(() => {
+        window.location.href = "/REPONIJOWEL/components/modals/login3.html"; // Redirect to the desired page
+      }, 500); // Match this duration with the CSS transition duration
+    }
+
+    function redirectToLogin(event) {
+      event.preventDefault();
+      const signupLink = event.target;
+      signupLink.classList.add('fade-out');
+
+      setTimeout(() => {
+        window.location.href = "/REPONIJOWEL/components/modals/login1.html"; // Redirect to the desired page
+      }, 500); // Match this duration with the CSS transition duration
+    }
+
+    // Function to toggle password visibility
+    document.getElementById('showPassword').addEventListener('change', function() {
+      const passwordField = document.getElementById('password');
+      if (this.checked) {
+        passwordField.type = 'text';
+      } else {
+        passwordField.type = 'password';
+      }
+    });
+  </script>
 </body>
 </html>
