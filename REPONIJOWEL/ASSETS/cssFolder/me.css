@@ -3,6 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+    color: #F5F5DC;
+    font-weight: bold;
   }
 
   body {
@@ -180,7 +182,7 @@
   }
   
   .user-table thead {
-    background-color: #ffffff;
+    background-color: #c40000;
     color:#4caf4f ;
     padding: 10px;
   }

@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+  color: #F5F5DC;
 }
 
 body, html {
@@ -43,7 +44,7 @@ body, html {
   text-align: center;
   color: white;
 
-  background-color: rgba(255, 255, 255, 0.2); /* 👈 soft white background */
+  background-color:  #4caf4f6e; /* 👈 soft white background */
   padding: 50px;
   width: 80%;
   border-radius: 30px;
@@ -52,7 +53,7 @@ body, html {
 
 
 .overlay h1 {
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   text-shadow: 1px 1px 5px #000;
 }
 

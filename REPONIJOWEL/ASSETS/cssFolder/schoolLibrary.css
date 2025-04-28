@@ -35,7 +35,7 @@
     height: 70px;
 }
 .primaryNavigation a {
-    color: white;
+    color: #F5F5DC;
     text-decoration: none;
     font-size: 1.1rem;
     display: flex;
@@ -43,34 +43,48 @@
     gap: 0.5rem;
     transition: color 0.3s ease;
     padding-right: 10px;
+    font-weight: bold;
 }
 .primaryNavigation li :hover{
-    background-color: wheat;
+    background-color: #f5f5dca9;
     }
 .container{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 88vh;
     background: url(/REPONIJOWEL/ASSETS/imgFolder/schoolppp.png) no-repeat center center;
     background-size: 100rem;
 }
 .maincontent{
-    color: white;
+    color: #F5F5DC;
     width: 60rem;
-    height: 15rem;
-    background-color: rgba(202, 200, 200, 0.165);
+    height: 20rem;
+    background-color: #4caf4f56;
     padding:3rem;
+    
+}
 
+p, h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttons{
+    gap: 8rem;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .buttons button {
     margin: 10px;
     padding: 10px ;
     border: none;
-    width: 200px;
+    width: 250px;
     height: 40px;
     background: #4CAF50;
-    color: white;
+    color: #F5F5DC;
     cursor: pointer;
     border-radius:50rem;
 }

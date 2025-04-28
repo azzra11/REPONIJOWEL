@@ -3,6 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+    color: #F5F5DC;
+    font-weight: bold;
   }
 
   body {
@@ -78,7 +80,7 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: white;
+  color: #F5F5DC;
   font-size: 14px;
   border-radius: 8px;
   transition: background-color 0.3s, color 0.3s;
@@ -109,7 +111,7 @@
   border-radius: 40px;
 }
 .contentarea{
-  color: white;
+  color: #F5F5DC;
   width: 850px;
   padding: 20px;
 
@@ -145,7 +147,7 @@
 }
 
 .user-table thead {
-  background-color: #ffffff;
+  background-color: #960a0a;
   color:#4caf4f ;
   padding: 10px;
 }
@@ -181,7 +183,7 @@
   border: none;
   border-radius: 15px;
   background-color: #1e7f3f;
-  color: white;
+  color: #F5F5DC;
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.2s;

@@ -3,6 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    color: #F5F5DC;
+    font-weight: bold;
   }
   
   body, html {
