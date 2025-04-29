@@ -3,17 +3,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #E6F0DC;
 }
 
 body {
   padding: 0;
   margin: 0;
   background-color: #489255;
-  background-image: url(/REPONIJOWEL/ASSETS/imgFolder/schoolppp.png);
-  background-position: center center;
-  background-size: 100%; /* Initial background size */
-  background-repeat: no-repeat;
-  animation: backgroundZoom 10s infinite alternate, fadeIn 2s ease-in-out; /* Background zoom and fade-in animations */
+  animation: fadeIn 2s ease-in-out; /* Fade-in animation for the body */
+  background: url(/REPONIJOWEL/ASSETS/imgFolder/schoolppp.png) no-repeat center center;
+  background-size: 210vh;/
 }
 
 .logo {
@@ -63,7 +62,7 @@ body {
 
 .primaryNavigation a:hover {
   background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background on hover */
-  color: #4CAF50; /* Change text color on hover */
+  color: wheat; /* Change text color on hover */
   transform: scale(1.1); /* Scale up on hover */
 }
 
@@ -71,13 +70,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  padding-bottom: 3rem;
-  animation: fadeIn 2s ease-in-out; /* Fade-in animation for the container */
+  min-height: 80vh;
+  animation: backgroundZoom 10s infinite alternate; /* Background zoom animation */
+  margin: 20px;
 }
 
 .iconcontainer {
-  background-color: #48925694;
+  background-color: #4caf4fa9;
   padding: 2rem;
   border-radius: 12px;
   color: white;
