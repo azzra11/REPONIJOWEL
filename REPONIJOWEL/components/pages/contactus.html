@@ -81,6 +81,21 @@
       </div>
     
   </main>
+  <script>
+    // Add event listeners to the navigation links
+document.querySelectorAll('.primaryNavigation a').forEach(link => {
+  link.addEventListener('click', function(event) {
+    event.preventDefault();
+    const body = document.body;
+    body.classList.add('fade-out');
+
+    setTimeout(() => {
+      window.location.href = this.getAttribute('href');
+    }, 500); // Match this duration with the CSS transition duration
+  });
+});
+
+  </script>
 </body>
 </html>
 

@@ -1,75 +1,132 @@
+/* Reset and base styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }body{
-    padding: 0;
-    margin: 0;
-    background-color:#489255;
-    background-image: url(/REPONIJOWEL/ASSETS/imgFolder/schoolppp.png);
-    background-size: 210vh;
-    background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.logo{
-    margin: -7rem;
-    width: 50vh;
-    aspect-ratio: 1;
-    padding-bottom:1.5rem;
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #489255;
+  background-image: url(/REPONIJOWEL/ASSETS/imgFolder/schoolppp.png);
+  background-size: 200vh; /* Initial background size */
+  background-repeat: no-repeat;
+  background-position: center center;
+  animation: backgroundZoom 10s infinite alternate, fadeIn 2s ease-in-out; /* Added zoom effect and fade-in */
 }
-.flex{
-    display: flex;
-    align-items: center;
-    gap: var(--2, 2rem);
+
+.logo {
+  margin: -7rem;
+  width: 50vh;
+  aspect-ratio: 1;
+  padding-bottom: 1.5rem;
+  animation: fadeIn 2s ease-in-out; /* Fade-in animation for the logo */
 }
-.primaryNavigation{
-    text-decoration: none; 
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    align-items: center;
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: var(--2, 2rem);
 }
-.primary-header{
-    align-items: center;
-    height: 3rem;
-    justify-content: space-between;
-    background-color:#4caf4f;
-    backdrop-filter: blur(6px);
-    height: 70px;
+
+.primaryNavigation {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
 }
+
+.primary-header {
+  align-items: center;
+  height: 3rem;
+  justify-content: space-between;
+  background-color: #4caf4f;
+  backdrop-filter: blur(6px);
+  height: 70px;
+  animation: slideIn 1s ease-in-out; /* Slide-in animation for the header */
+}
+
 .primaryNavigation a {
-    color: #F5F5DC;
-    text-decoration: none;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: color 0.3s ease;
-    padding-right: 10px;
-    font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+  padding: 10px 15px;
+  border-radius: 50rem;
 }
-.primaryNavigation li :hover{
-    background-color: wheat;
-    }
-.container{
-    padding-top: 3rem;
-    display: flex;
-    justify-self: center;
-    align-content: center;
+
+.primaryNavigation a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background on hover */
+  color: #4CAF50; /* Change text color on hover */
+  transform: scale(1.1); /* Scale up on hover */
 }
-.maincontent{
-    padding: 45px;
-    color: #F5F5DC;
-    width: 65rem;
-    height: 75vh;
-    background-color: #4caf4fa9;
+
+.container {
+  padding-top: 3rem;
+  display: block;
+  justify-self: center;
+  align-content: center;
+  animation: fadeIn 2s ease-in-out; /* Fade-in animation for the container */
 }
-.abtustxt{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
+
+.maincontent {
+  padding: 45px;
+  color: white;
+  width: 65rem;
+  height: 75vh;
+  background-color: #4caf4fa9;
+  animation: fadeIn 2s ease-in-out; /* Fade-in animation for the main content */
 }
-.abtus{
-    font-size: medium;
-    padding: 2%;
+
+.visiontxt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  animation: fadeIn 2s ease-in-out; /* Fade-in animation for the vision text */
+}
+
+.vtxt {
+  padding: 2%;
+  animation: fadeIn 2s ease-in-out; /* Fade-in animation for the vision text content */
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Zoom effect for the background */
+@keyframes backgroundZoom {
+  from {
+    background-size: 200vh; /* Start with the initial size */
+  }
+  to {
+    background-size: 220vh; /* Zoom in slightly */
+  }
+}
+
+/* Fade-out effect for page transitions */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }

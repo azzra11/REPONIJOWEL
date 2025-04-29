@@ -1,16 +1,15 @@
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
-  color: #F5F5DC;
 }
 
 body, html {
   height: 100%;
   width: 100%;
 }
-
 
 .container {
   display: flex;
@@ -21,13 +20,20 @@ body, html {
 .left-panel {
   flex: 3;
   position: relative;
+  overflow: hidden; /* Ensure the zoom effect doesn't overflow */
 }
 
 .left-panel .background-img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  transition: transform 5s ease-in-out; /* Zoom effect */
 }
+
+.left-panel:hover .background-img {
+  transform: scale(1.1); /* Zoom in on hover */
+}
+
 .logo {
   height: 80px;     /* make it shorter — adjust as needed */
   width: auto;       /* maintain aspect ratio */
@@ -43,17 +49,23 @@ body, html {
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
-
-  background-color: #4caf4f6e; /* 👈 soft white background */
+  background-color: rgba(255, 255, 255, 0.2); /* 👈 soft white background */
   padding: 50px;
   width: 80%;
   border-radius: 30px;
   backdrop-filter: blur(1px); /* blur adjusment */
+  opacity: 0; /* Initial state for fade-in */
+  animation: fadeIn 2s forwards; /* Fade-in animation */
 }
 
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
 
 .overlay h1 {
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   text-shadow: 1px 1px 5px #000;
 }
 
@@ -66,21 +78,17 @@ body, html {
   flex-direction: column;
   justify-content: center;
   color: white;
-
 }
 
 .right-panel-content {
   margin-top: 40px; /* 👈 Adjustment to move content down */
 }
 
-
-
 .header-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   position: relative;
   margin-bottom: 10px;
   padding-top: 20px;
@@ -121,7 +129,8 @@ form {
 }
 
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="text"] {
   width: 60%;
   padding: 10px 20px;
   border-radius: 60px;
@@ -129,9 +138,8 @@ input[type="password"] {
   margin: 10px auto 20px auto;
   font-size: 1rem;
   display: block;
-
-
 }
+
 
 .options {
   display: flex;
@@ -142,7 +150,6 @@ input[type="password"] {
   margin-bottom: 20px;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
-
 }
 
 .options a {
@@ -151,7 +158,7 @@ input[type="password"] {
 }
 
 button {
-  width: 60%; 
+  width: 60%;
   background-color: white;
   color: #4CAF50;
   padding: 15px;
@@ -164,22 +171,35 @@ button {
   font-family: 'Roboto', sans-serif;
   margin: 10px auto 20px auto;
   font-size: 0.9rem;
+  transition: opacity 0.5s ease; /* Added opacity transition */
+}
+
+button:hover {
+  background-color: wheat;
+}
+
+/* Fade-out effect */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 .signup {
   font-size: 0.9rem;
   text-align: center;
-  margin-top: 5px;
-  align-self: center; /* Helps center inside flex container */
+  margin-top: 20px; /* Adjusted margin for better spacing */
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
   color: white;
   text-decoration: underline;
+  display: block; /* Ensure it behaves like a block element */
+  width: fit-content; /* Adjust width to fit content */
+  margin: 0 auto; /* Center horizontally */
+  transition: opacity 0.5s ease; /* Added opacity transition */
 }
 
-.signup a {
-  color: white;
-  text-decoration: underline;
+.signup:hover {
+  opacity: 0.7; /* Slight fade effect on hover */
 }
 
 .socials {
@@ -207,4 +227,15 @@ button {
   width: 30px;
   height: 30px;
   cursor: pointer;
+}
+
+.socials img:hover {
+  transform: scale(1.2); /* Bounce effect on hover */
+}
+
+.socials img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Added transform transition */
 }

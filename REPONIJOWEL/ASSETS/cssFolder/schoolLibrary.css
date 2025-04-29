@@ -1,95 +1,135 @@
+/* Reset and base styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }body{
-    padding: 0;
-    margin: 0;
-    background-color:#489255;
-    background-image: url(/REPONIJOWEL/ASSETS/imgFolder/schoolppp.png);
-    background-size: 210vh;
-    background-repeat: no-repeat;
-}
-.logo{
-    margin: -7rem;
-    width: 50vh;
-    aspect-ratio: 1;
-    padding-bottom:1.5rem;
-}
-.flex{
-    display: flex;
-    align-items: center;
-    gap: var(--2, 2rem);
-}
-.primaryNavigation{
-    --gap: 1rem;
-    text-decoration: none; 
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    align-items: center;
-}
-.primary-header{
-    align-items: center;
-    height: 3rem;
-    justify-content: space-between;
-    background-color:#4caf4f;
-    backdrop-filter: blur(6px);
-    height: 70px;
-}
-.primaryNavigation a {
-    color: #F5F5DC;
-    text-decoration: none;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: color 0.3s ease;
-    padding-right: 10px;
-    font-weight: bold;
-}
-.primaryNavigation li :hover{
-    background-color: #f5f5dca9;
-    }
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 88vh;
-    background-size: 100rem;
-}
-.maincontent{
-    color: #F5F5DC;
-    width: 60rem;
-    height: 20rem;
-    background-color: #4caf4f56;
-    padding:3rem;
-    
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-p, h1{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #489255;
+  animation: fadeIn 2s ease-in-out; /* Fade-in animation for the body */
 }
-.buttons{
-    gap: 8rem;
-    padding: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.logo {
+  margin: -7rem;
+  width: 50vh;
+  aspect-ratio: 1;
+  padding-bottom: 1.5rem;
+  animation: fadeIn 2s ease-in-out; /* Fade-in animation for the logo */
 }
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: var(--2, 2rem);
+}
+
+.primaryNavigation {
+  --gap: 1rem;
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.primary-header {
+  align-items: center;
+  height: 3rem;
+  justify-content: space-between;
+  background-color: #4caf4f;
+  backdrop-filter: blur(6px);
+  height: 70px;
+  animation: slideIn 1s ease-in-out; /* Slide-in animation for the header */
+}
+
+.primaryNavigation a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+  padding: 10px 15px;
+  border-radius: 50rem;
+}
+
+.primaryNavigation a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background on hover */
+  color: wheat; /* Change text color on hover */
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(/REPONIJOWEL/ASSETS/imgFolder/schoolppp.png) no-repeat center center;
+  background-size: 100rem;
+  animation: backgroundZoom 10s infinite alternate; /* Background zoom animation */
+}
+
+.maincontent {
+  color: white;
+  width: 60rem;
+  height: 15rem;
+  background-color: rgba(202, 200, 200, 0.165);
+  padding: 3rem;
+  animation: fadeIn 2s ease-in-out; /* Fade-in animation for the main content */
+}
+
 .buttons button {
-    margin: 10px;
-    padding: 10px ;
-    border: none;
-    width: 250px;
-    height: 40px;
-    background: #4CAF50;
-    color: #F5F5DC;
-    cursor: pointer;
-    border-radius:50rem;
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  width: 200px;
+  height: 40px;
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+  border-radius: 50rem;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
 }
+
 .buttons button:hover {
-    background-color: wheat;
+  background-color: wheat;
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes backgroundZoom {
+  from {
+    background-size: 100rem;
+  }
+  to {
+    background-size: 110rem;
+  }
+}
+
+/* Fade-out effect for page transitions */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}

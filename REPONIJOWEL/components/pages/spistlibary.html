@@ -93,12 +93,36 @@
   <!-- Optional inline JS fallback -->
   <script>
     function login() {
-  window.location.href ="/REPONIJOWEL/components/pages/login1.html";
+  const body = document.body;
+  body.classList.add('fade-out');
+
+  setTimeout(() => {
+    window.location.href = "/REPONIJOWEL/components/modals/login1.html";
+  }, 500); // Match this duration with the CSS transition duration
 }
 
 function signup() {
-  window.location.href ="/REPONIJOWEL/components/pages/login4.html";
+  const body = document.body;
+  body.classList.add('fade-out');
+
+  setTimeout(() => {
+    window.location.href = "/REPONIJOWEL/components/modals/login4.html";
+  }, 500); // Match this duration with the CSS transition duration
 }
+
+// Add event listeners to the navigation links
+document.querySelectorAll('.primaryNavigation a').forEach(link => {
+  link.addEventListener('click', function(event) {
+    event.preventDefault();
+    const body = document.body;
+    body.classList.add('fade-out');
+
+    setTimeout(() => {
+      window.location.href = this.getAttribute('href');
+    }, 500); // Match this duration with the CSS transition duration
+  });
+});
+
   </script>
 </body>
 </html>

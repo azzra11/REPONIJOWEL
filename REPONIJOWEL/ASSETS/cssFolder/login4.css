@@ -1,213 +1,243 @@
+/* Reset and base styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    color: #F5F5DC;
-    font-weight: bold;
-  }
-  
-  body, html {
-    height: 100%;
-    width: 100%;
-  }
-  
-  
-  .container {
-    display: flex;
-    height: 100vh;
-  }
-  
-  /* Left panel (background with image and text) */
-  .left-panel {
-    flex: 3;
-    position: relative;
-  }
-  
-  .left-panel .background-img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-  .logo {
-    height: 80px;     /* logo adjustment */
-    width: auto;       /* maintain aspect ratio */
-    display: block;
-    margin: 0 auto 20px auto;
-    object-fit: contain;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-  
-    background-color: rgba(255, 255, 255, 0.2); /* 👈 soft white background */
-    padding: 50px;
-    width: 80%;
-    border-radius: 30px;
-    backdrop-filter: blur(1px); /* blur adjusment */
-  }
-  
-  .overlay h1 {
-    font-size: 1.5rem;  /* 👈 font adjustment */   
-    text-shadow: 1px 1px 5px #000;
-  }
-  
-  /* Right panel (login form) */
-  .right-panel {
-    flex: 2;
-    background-color: #489255;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: white;
-  
-  }
-  
-  .right-panel-content {
-    margin-top: 20px; /* 👈 Adjust  to move content down */
-  }
-  
-  .header-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  
-    position: relative;
-    margin-bottom: 10px;
-    padding-top: 10px;
-  }
-  
-  .header-wrapper::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 400px; /* smaller width */
-    height: 2px;
-    background-color: white;
-  }
-  
-  .header-wrapper h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    padding-bottom: 5px;
-    border-bottom: 2px solid white;
-    width: fit-content;
-    font-weight: bold;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  .small-line {
-    border: none;
-    height: 2px;
-    background-color: white;
-    margin: 10px auto;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  input[type="email"],
-  input[type="name"],
-  input[type="student"],
-  input[type="course"],
-  input[type="password"] {
-    width: 60%;
-    padding: 5px 10px;
-    border-radius: 60px;
-    border: none;
-    margin: 5px auto 10px auto;
-    font-size: 1rem;
-    display: block;
-  }
-  
-  .options {
-    display: flex;
-    justify-content: center;  /* Center horizontally */
-    align-items: center;
-    gap: 10px;                 /* Space between the label and the link */
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-    font-weight: bold;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  .optionss {
-    display: flex;
-    justify-content: center;  /* Center horizontally */
-    align-items: center;
-    gap: 20px;                 /* Space between the label and the link */
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-    font-weight: bold;
-    font-family: 'Roboto', sans-serif;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
 
-  .optionss a {
-    color: white;
-    text-decoration: underline;
-  }
+body, html {
+  height: 100%;
+  width: 100%;
+}
 
-  
-  button {
-    width: 60%; 
-    background-color: white;
-    color: #4CAF50;
-    padding: 15px;
-    border: none;
-    border-radius: 60px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-bottom: 15px;
-    font-weight: bold;
-    font-family: 'Roboto', sans-serif;
-    margin: 10px auto 20px auto;
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Left panel (background with image and text) */
+.left-panel {
+  flex: 3;
+  position: relative;
+  overflow: hidden; /* Ensure the zoom effect doesn't overflow */
+}
+
+.left-panel .background-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 5s ease-in-out; /* Zoom effect */
+}
+
+.left-panel:hover .background-img {
+  transform: scale(1.1); /* Zoom in on hover */
+}
+
+.logo {
+  height: 80px;     /* logo adjustment */
+  width: auto;       /* maintain aspect ratio */
+  display: block;
+  margin: 0 auto 20px auto;
+  object-fit: contain;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2); /* 👈 soft white background */
+  padding: 50px;
+  width: 80%;
+  border-radius: 30px;
+  backdrop-filter: blur(1px); /* blur adjusment */
+  opacity: 0; /* Initial state for fade-in */
+  animation: fadeIn 2s forwards; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
   }
-  
-  .signup-text {
-    font-size: 1.3rem;
-    text-align: center;
-    margin-top: 10px;
-    align-self: center; /* Helps center inside flex container */
-    font-weight: bold;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  .socials {
-    margin-top: 10px;
-    display: flex;
-    gap: 130px;
-    justify-content: center;
-    margin-bottom: 20px;
-    padding-top: 30px;
-    position: relative;
-  }
-  
-  .socials::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 400px; /* adjust width if needed */
-    height: 2px;
-    background-color: white;
-  }
-  
-  .socials img {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-  }
-  
+}
+
+.overlay h1 {
+  font-size: 1.5rem;  /* 👈 font adjustment */
+  text-shadow: 1px 1px 5px #000;
+}
+
+/* Right panel (login form) */
+.right-panel {
+  flex: 2;
+  background-color: #489255;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.right-panel-content {
+  margin-top: 20px; /* 👈 Adjust  to move content down */
+}
+
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+
+.header-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px; /* smaller width */
+  height: 2px;
+  background-color: white;
+}
+
+.header-wrapper h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid white;
+  width: fit-content;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+.small-line {
+  border: none;
+  height: 2px;
+  background-color: white;
+  margin: 10px auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="email"],
+input[type="name"],
+input[type="student"],
+input[type="course"],
+input[type="password"],
+input[type="text"] {
+  width: 60%;
+  padding: 5px 10px;
+  border-radius: 60px;
+  border: none;
+  margin: 5px auto 10px auto;
+  font-size: 1rem;
+  display: block;
+}
+
+.options {
+  display: flex;
+  justify-content: center;  /* Center horizontally */
+  align-items: center;
+  gap: 10px;                 /* Space between the label and the link */
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+.optionss {
+  display: flex;
+  justify-content: center;  /* Center horizontally */
+  align-items: center;
+  gap: 20px;                 /* Space between the label and the link */
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+.optionss a {
+  color: white;
+  text-decoration: underline;
+  transition: opacity 0.5s ease; /* Added opacity transition */
+}
+
+.optionss a:hover {
+  opacity: 0.7; /* Slight fade effect on hover */
+}
+
+button {
+  width: 60%;
+  background-color: white;
+  color: #4CAF50;
+  padding: 15px;
+  border: none;
+  border-radius: 60px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  margin: 10px auto 20px auto;
+  transition: opacity 0.5s ease; /* Added opacity transition */
+}
+
+button:hover {
+  background-color: wheat;
+}
+
+/* Fade-out effect */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.signup-text {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 10px;
+  align-self: center; /* Helps center inside flex container */
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+.socials {
+  margin-top: 10px;
+  display: flex;
+  gap: 130px;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding-top: 30px;
+  position: relative;
+}
+
+.socials::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px; /* adjust width if needed */
+  height: 2px;
+  background-color: white;
+}
+
+.socials img:hover {
+  transform: scale(1.2); /* Bounce effect on hover */
+}
+
+.socials img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Added transform transition */
+}

@@ -1,101 +1,88 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Southern Philippines Institute of Science & Technology</title>
-
-  <!-- icon -->
   <link rel="icon" type="image/png" href="/REPONIJOWEL/ASSETS/imgFolder/school-logo-large.png" />
+  <link rel="stylesheet" href="/REPONIJOWEL/ASSETS/cssFolder/visioncss.css" />
 
-  <!--  CSS -->
-  <link rel="stylesheet" href="/REPONIJOWEL/ASSETS/cssFolder/server.css" />
-
-  <!-- Google Material Symbols -->
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-
-  <!-- Font Awesome -->
+  <!--  icons -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   />
 
+  <!--  Symbols -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    rel="stylesheet"
+  />
+
+  <!-- JavaScript -->
+  <script src="/jsFolder/schooljs.js" defer></script>
+
+  <title>Southern Philippines Institute of Science & Technology</title>
 </head>
+
 <body>
-     
-        <!-- Header -->
-  <header>
-    <div class="header-container">
-      <img src="/REPONIJOWEL/ASSETS/imgFolder/school-logo-large.png" alt="School Logo" style="height: 40px; margin-right: 10px;" />
-      <p style="font-weight: bold;">Southern Philippines Institute of Science & Technology</p>
+  <header class="primary-header flex">
+    <div>
+      <img src="/imgFolder/small.png" alt="SPiST Logo" class="logo" />
     </div>
+    <nav>
+      <ul class="primaryNavigation flex">
+        <li>
+          <a href="/REPONIJOWEL/components/pages/spistlibary.html ">
+            <span class="material-symbols-outlined">home</span> Home
+          </a>
+        </li>
+        <li>
+          <a href="/REPONIJOWEL/components/pages/vision.html">
+            <span class="material-symbols-outlined">star</span> Vision
+          </a>
+        </li>
+        <li>
+          <a href="/REPONIJOWEL/components/pages/aboutus.html">
+            <span class="material-symbols-outlined">groups</span>About Us
+          </a>
+        </li>
+        <li>
+          <a href="/REPONIJOWEL/components/pages/contactus.html">
+            <span class="material-symbols-outlined">call</span> Contact Us
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
- 
-  <!-- admin profile-->
-  <aside class="sidebar">
-    <div class="admincontiner">
-     <div class="admin-profile">
-       <p><span class="material-symbols-outlined">person</span><span style="font-weight: 150px;">John Doe</span></p>
-       <div class="white"></div>  
-     </div>
-    </div> 
-   
-    <!-- Sidebar -->
-    <div class="sidebar-container">
-      <nav class="nav">
-        <ul>
-          <li>
-            <a href="/REPONIJOWEL/components/pages/server.html"><span class="material-symbols-outlined">person</span> User</a>
-          </li>
-          <li>
-            <a href="/REPONIJOWEL/components/pages/admin.html"><span class="material-symbols-outlined">admin_panel_settings</span> Admin</a>
-          </li>
-          <li>
-            <a href="/REPONIJOWEL/components/pages/books.html"><span class="material-symbols-outlined">book</span> Books</a>
-          </li>
-          <li>
-            <a href="#"><span class="material-symbols-outlined">logout</span> Log out</a>
-          </li>
-        </ul>
-      </nav>
+
+  <main>
+    <section class="mainsection">
+      <div class="container">
+       <div class="maincontent">
+          <p class="visiontxt">VISION</p>
+          <hr>
+          <p class="vtxt">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque pariatur labore quaerat ut rerum illum repudiandae in iusto exercitationem ipsam, cum accusamus quasi maxime tempora velit odit praesentium at consequuntur.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel voluptates porro dolore aliquam veritatis. Nobis repellat sit, hic quae eos nostrum esse incidunt. Exercitationem, sapiente recusandae? Sint ipsam reprehenderit similique.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptas tenetur quis harum enim voluptatem voluptatibus nesciunt impedit in et fugiat nisi, officia quibusdam optio, placeat possimus ratione perferendis cumque.
+          </p>
+       </div>
     </div>
-  </aside> 
-  <main class="container">
-      <div class="maincontent">    
-        <div class="contentarea">
-          <h1>User:</h1>
-            <div class="fnctiondiv">
-              <div class="Email-container">
-               <input type="text" placeholder="Studentemail" />
-              </div> 
-              <div class="search-container">
-                <input type="text" placeholder="Search..." />
-                <button class="search-button" onclick=""  >Search</button>
-             </div>
-            </div>
-            <div class="spacecontainer">
-            <div class="spacerdiv"></div>
-          </div>
-            <div class="table-wrapper">
-              <table  onclick="" class="user-table">
-                <thead>
-                  <tr>
-                    <td>Name </td>
-                    <td>Student id</td>
-                    <td>Course&Year</td>
-                    <td>Rented books</td>
-                    <td>Books title</td>
-                    <td>Date to return</td>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr> 
-                  </tr>
-                </tbody>
-              </table>
-            </div>            
-          </div>
-      </div>
-  </main>
+   </main>
+  <script>
+  // Add event listeners to the navigation links
+    document.querySelectorAll('.primaryNavigation a').forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+        const body = document.body;
+        body.classList.add('fade-out');
+    
+        setTimeout(() => {
+          window.location.href = this.getAttribute('href');
+        }, 500); // Match this duration with the CSS transition duration
+      });
+    });
+    </script>
 </body>
 </html>
