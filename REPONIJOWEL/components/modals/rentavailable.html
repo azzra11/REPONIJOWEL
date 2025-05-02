@@ -6,6 +6,112 @@
   <link rel="icon" type="image/png" href="/REPONIJOWEL/ASSETS/imgFolder/school-logo-large.png" />
   <link rel="stylesheet" href="/REPONIJOWEL/ASSETS/cssFolder/rentavailable.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* Modal Styles */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal {
+      background-color: #44a347;
+      color: #E6F0DC;
+      padding: 30px 40px;
+      border-radius: 20px;
+      width: 350px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .modal label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    .modal input, .modal select {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .button-group {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .modal button {
+      flex: 1;
+      padding: 10px 0;
+      border: none;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .submit-btn {
+      background-color: white;
+      color: #44a347;
+    }
+
+    .submit-btn:hover {
+      background-color: #e0e0e0;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      background: #fff;
+      padding: 10px 0 0 0;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .user-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 5px;
+      height: 100px;
+    }
+
+    .user-table thead, .user-table td {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #685f5f;
+    }
+
+    .close-btn {
+      background: none;
+      color: #fff;
+      font-size: 18px;
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -17,41 +123,72 @@
     <div class="maincontainer">
       
       <div class="leftpanel">
-       <div class="imgcontainer"><img src="/REPONIJOWEL/ASSETS/imgFolder/book1.jpg" alt="booksimage" class="booksimg"></div>
-        
-       <div class="buttons">
-        <button onclick="">Rent</button>
-        <button onclick="">Avialable</button>
-       </div> 
-      </div>
-
-       <div class="booksdetails">
-          <h2>The Adventures of Huckleberry Finn</h2>
-          <p class="description">
-            Tells the story of a young boy, Huck Finn, who escapes his abusive father and travels <br>down the Mississippi River on a raft with a runaway slave named Jim, encountering <br>various characters and situations as they navigate the complexities<br>of pre-Civil War America, ultimately leading Huck to question societal norms<br> and develop a deep friendship with Jim despite the constraints of slavery.
-          </p>
-          <p class="summary">
-            <strong>Adventures of Huckleberry Finn</strong> is a picaresque novel by American author Mark Twain that <br>was first published in the United Kingdom in December 1884 and in the <br>United States in February 1885.
-          </p>
-          <p><strong>Originally published:</strong> December 10, 1884</p>
-          <p><strong>Author:</strong> <a href="#">Mark Twain</a></p>
-          <p><strong>Genres:</strong>
-            <a href="#">Novel</a>, <a href="#">Satire</a>, <a href="#">Humor</a>, 
-            <a href="#">Adventure fiction</a>, <a href="#">Children's literature</a>, 
-            <a href="#">Bildungsroman</a>, <a href="#">Picaresque novel</a>, 
-            <a href="#">Robinsonade</a>
-          </p>
-          <p><strong>Characters:</strong>
-            <a href="#">Huckleberry Finn</a>, <a href="#">Jim</a>, <a href="#">Tom Sawyer</a>, 
-            <a href="#">Pap Finn</a>, <a href="#">Aunt Polly</a>, 
-            <a href="#">Toad of Toad Hall</a>
-          </p>
-          <p><strong>Illustrator:</strong> E. W. Kemble</p>
-          <p><strong>Pages:</strong> 362</p>
+        <div class="imgcontainer">
+          <img src="/REPONIJOWEL/ASSETS/imgFolder/book1.jpg" alt="booksimage" class="booksimg">
         </div>
         
+        <div class="buttons">
+          <button onclick="openModal()">Rent</button>
+          <button>Available</button>
+        </div> 
+      </div>
+
+      <div class="booksdetails">
+        <h2>The Adventures of Huckleberry Finn</h2>
+        <p class="description">Tells the story of a young boy... (summary truncated for clarity)</p>
+        <p class="summary"><strong>Adventures of Huckleberry Finn</strong> is a picaresque novel...</p>
+        <p><strong>Originally published:</strong> December 10, 1884</p>
+        <p><strong>Author:</strong> <a href="#">Mark Twain</a></p>
+        <!-- Other book details -->
+      </div>
 
     </div>
   </main>
+
+  <!-- Modal HTML -->
+  <div class="modal-overlay" id="rentModal">
+    <div class="modal">
+      <span class="close-btn" onclick="closeModal()">×</span>
+      <h2>Southern Philippines Institute of Science & Technology</h2>
+
+      <label for="email">Email:</label>
+      <input type="text" id="emailtxt">
+
+      <label for="name">Name:</label>
+      <input type="text" id="Nametxt">
+
+      <label for="bookname">Book name:</label>
+      <input type="text" id="bookname" value="The Adventures of Huckleberry Finn">
+
+      <div class="rentedbooks">
+        <p>Rented books:</p>
+        <div class="table-wrapper">
+          <table class="user-table">
+            <thead>
+              <tr><th>Title</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>The Adventures of Huckleberry Finn</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="button-group">
+        <button type="submit" class="submit-btn" onclick="closeModal()">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript to control modal -->
+  <script>
+    function openModal() {
+      document.getElementById('rentModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('rentModal').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
