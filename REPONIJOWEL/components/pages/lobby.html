@@ -1,55 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Library Dashboard</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/REPONIJOWEL/ASSETS/cssFolder/lobby.css">
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Southern Philippines Institute of Science & Technology</title>
+
+  <!-- icon -->
+  <link rel="icon" type="image/png" href="/REPONIJOWEL/ASSETS/imgFolder/school-logo-large.png" />
+
+  <!--  CSS -->
+  <link rel="stylesheet" href="/REPONIJOWEL/ASSETS/cssFolder/lobby.css" />
+
+  <!-- Google Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
 </head>
 <body>
-  <header>
-    <img src="/REPONIJOWEL/ASSETS/imgFolder/school-logo-large.png" alt="Logo" class="logo">
-    <h1>Southern Philippines Institute of Science & Technology</h1>
-  </header>
 
-  <div class="container">
-    <!-- Left Sidebar -->
-    <div class="sidebar">
-      <div class="profile">
-        <div class="avatar">👤</div>
-        <p>John Doe</span>
+<!-- strart of Header -->
+     <header>
+      <div class="header-container">
+        <img src="/REPONIJOWEL/ASSETS/imgFolder/school-logo-large.png" alt="School Logo" style="height: 40px; margin-right: 10px;" />
+        <p>Southern Philippines Institute of Science & Technology</p>
       </div>
-      <div class="button">
-        <div class="category-buttons">
-            <h3>Categories</h3>
-          <button class="cat-btn">Fantasy</button>
-          <button class="cat-btn">Science Fiction</button>
-          <button class="cat-btn">Mystery</button>
-          <button class="cat-btn">Horror</button>
-          <button class="cat-btn">Romance</button>
-          <button class="cat-btn">Thriller</button>
+    </header>
+<!-- end of Header -->
+
+ <!-- admin profile-->
+ <aside class="sidebar">
+  <div class="admincontiner">
+   <div class="admin-profile">
+     <div class="pin">
+      <div class="pcontainer">
+        <span class="material-symbols-outlined" style="color: black;">account_circle</span>
+      </div>
+        <div class="usrnm">
+          <h1 style="font-weight:bolder; font-size: 20px;">John Doe</h1>
         </div>
-        <small class="live-status">• Live | 0 votes</small>
-      </div>
-    </div>
+     </div>
+      <div class="white"></div>
+   </div>
+  </div> 
+  
+  <!-- Sidebar -->
+  <div class="sidebar-container">
+    <nav class="nav">
+      <ul>
+        <li>
+          <a href="/REPONIJOWEL/components/pages/server.html"><span class="material-symbols-outlined">person</span> User</a>
+        </li>
+        <li>
+          <a href="#"><span class="material-symbols-outlined">admin_panel_settings</span> Admin</a>
+        </li>
+        <li>
+          <a href="#"><span class="material-symbols-outlined">book</span> Books</a>
+        </li>
+        <li>
+          <a href="#"><span class="material-symbols-outlined">logout</span> Log out</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</aside> 
 
-    <!-- Center Content -->
-    <div class="main-content">
-      <div class="title-search-bar">
-        <h2 class="section-title">Book Titles:</h2>
+<!-- container start -->    
+  <main class="container">
+<!-- maincontent start -->
+    <div class="maincontent"> 
+
+<!--start of ddbl  -->   
+     <div class="ddbl">
+
+<!--start of ddblcontent  --> 
+        <div class="ddblcontent">
+          <h1 style="font-weight: bold;">USER:</h1>
+
+<!--start of serchctn  --> 
         <div class="search-container">
           <input type="text" placeholder="Search..." />
           <button class="search-button">Search</button>
         </div>
-      </div>
-        <div class="book-list">
-          <button class="book-button">The Adventures of Huckleberry Finn</button>
-          <!-- Add more book items as needed -->
+<!--end  of serchctn  --> 
+
+        </div>
+<!--end of ddblcontent  --> 
+     <hr style="padding: 1px; border: none; background-color: white;">
+    
+<!-- start of Spacee div -->
+    <div class="spacecontainer">
+      <div class="spacerdiv"></div>
+    </div>
+<!-- end of Spacee div -->
+
+<!-- start of  table-wrapper-->
+  <div class="table-wrapper">
+    <table class="user-table">
+      <thead>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<!-- end of table-wrapper -->
+  </div>
+<!--end of ddbl  -->
+ 
+      <div class="ddbr">
+        <div class="ddbrcontent1">
+
+          <div class="br">
+           <p style="font-weight: bold; font-size: 15px;">Book rented</p>
+          </div>
+
+          <div class="spacecontainer"><hr></div>
+
+           <div class="tableddbl">
+
+           </div>
+        </div>
+
+        <div class="spacecontainer"></div>
+
+        <div class="ddbrcontent2">
+          
+         <div class="rb">
+          <p style="font-weight: bold; font-size: 12px;">Reccomended books</p>
+         </div>
+         
+          <div class="spacecontainer"><hr></div>
+          <div class="tableddbr">
+
+          </div>
+        </div>
+      </div>    
+
+    </div>
+<!--end of maincontent-->
+    
+  </main>
+<!-- container end --> 
+
+
+
+
+
+
+
+
+    <!-- <div class="main-content">
+      <div class="title-search-bar">
         </div>
       </div>
 
-    <!-- Right Sidebar -->
+    
     <div class="info-panels">
       <div class="panel books-due">
         <h3>Books Due</h3>
@@ -61,6 +177,7 @@
         <hr />
       </div>
     </div>
-  </div>
+  </div>  -->
+
 </body>
 </html>

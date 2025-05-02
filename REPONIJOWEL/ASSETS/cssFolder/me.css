@@ -3,6 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+    color: #E6F0DC;
+    font-weight: bold;
   }
 
   body {
@@ -16,6 +18,7 @@
 
   /* Header */
 .header-container {
+    text-shadow: 1px 1px 5px #000;
     background-color: #44a347;
     color: white;
     padding: 20px;
@@ -91,7 +94,7 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
-    border-radius: 30px;
+    border-radius: 20px;
 }
 .contentbtn button {
     padding: 20px ;
@@ -101,7 +104,7 @@
     background: #44a347;
     color: white;
     cursor: pointer;
-    border-radius:50rem;
+    border-radius:10rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -180,8 +183,8 @@
   }
   
   .user-table thead {
-    background-color: #ffffff;
-    color:#4caf4f ;
+    background-color: #c40000;
+    color: #E6F0DC;
     padding: 10px;
   }
   
