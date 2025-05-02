@@ -26,12 +26,13 @@
     body {
       font-family: 'Roboto', sans-serif;
       font-weight: bold;
-  
       background-color: #e9f0e6;
       margin: 0;
+      opacity: 0;
+      animation: fadeInPage 1s ease-in-out forwards;
     }
 
-    .modal-overlay {
+    .modal-overlay, .logout-modal-overlay {
       position: fixed;
       top: 0;
       left: 0;
@@ -41,18 +42,20 @@
       display: none;
       justify-content: center;
       align-items: center;
+      animation: fadeIn 0.3s ease-in-out;
     }
 
-    .modal {
+    .modal, .logout-modal {
       background-color: #4f8a42;
       color: white;
       padding: 30px 40px;
       border-radius: 20px;
       width: 350px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      animation: scaleUp 0.3s ease-in-out;
     }
 
-    .modal h2 {
+    .modal h2, .logout-modal p {
       text-align: center;
       margin-bottom: 20px;
       font-size: 16px;
@@ -80,7 +83,7 @@
       color: #333;
     }
 
-    .modal button {
+    .modal button, .logout-modal button {
       margin-top: 20px;
       padding: 10px 20px;
       width: 100%;
@@ -91,13 +94,76 @@
       font-weight: bold;
       font-size: 14px;
       cursor: pointer;
-      transition: 0.3s;
+      transition: background-color 0.3s, transform 0.3s;
       font-family: 'Roboto', sans-serif;
       font-weight: bold;
     }
 
-    .modal button:hover {
+    .modal button:hover, .logout-modal button:hover {
       background-color: #e0e0e0;
+      transform: scale(1.05);
+    }
+
+    .logout-modal {
+      background: white;
+      border: 6px solid #3f9142;
+      border-radius: 40px;
+      padding: 30px;
+      text-align: center;
+      max-width: 400px;
+    }
+
+    .logout-modal p {
+      font-size: 20px;
+      color: #3f9142;
+      margin-bottom: 20px;
+    }
+
+    .logout-modal-buttons, .modal-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .logout-modal button {
+      background-color: #3f9142;
+      color: white;
+      border: none;
+      padding: 10px 30px;
+      font-size: 16px;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    .logout-modal button:hover {
+      background-color: #357d38;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes scaleUp {
+      from {
+        transform: scale(0.9);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fadeInPage {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
   </style>
 </head>
@@ -125,7 +191,7 @@
       <nav class="nav">
         <ul>
           <li>
-            <a href="/REPONIJOWEL/components/pages/server.html"><span class="material-symbols-outlined">person</span> User</a>
+            <a href="/REPONIJOWEL/components/modals/userprof.html"><span class="material-symbols-outlined">person</span> User</a>
           </li>
           <li>
             <a href="/REPONIJOWEL/components/pages/admin.html"><span class="material-symbols-outlined">admin_panel_settings</span> Admin</a>
@@ -134,7 +200,7 @@
             <a href="/REPONIJOWEL/components/pages/books.html"><span class="material-symbols-outlined">book</span> Books</a>
           </li>
           <li>
-            <a href="#"><span class="material-symbols-outlined">logout</span> Log out</a>
+            <a href="#" onclick="showLogoutModal()"><span class="material-symbols-outlined">logout</span> Log out</a>
           </li>
         </ul>
       </nav>
@@ -202,7 +268,7 @@
     <!-- end of maincontent -->
   </main>
 
-  <!-- Modal Structure -->
+  <!-- Admin Modal Structure -->
   <div class="modal-overlay" id="adminModal">
     <div class="modal">
       <h2>Southern Philippines Institute of Science & Technology</h2>
@@ -226,6 +292,17 @@
     </div>
   </div>
 
+  <!-- Logout Modal Structure -->
+  <div class="logout-modal-overlay" id="logoutModal">
+    <div class="logout-modal">
+      <p>Are you sure you want to log out?</p>
+      <div class="logout-modal-buttons">
+        <button onclick="logout()">Yes</button>
+        <button onclick="closeLogoutModal()">No</button>
+      </div>
+    </div>
+  </div>
+
   <script>
     function showModal() {
       document.getElementById('adminModal').style.display = 'flex';
@@ -233,6 +310,21 @@
 
     function closeModal() {
       document.getElementById('adminModal').style.display = 'none';
+    }
+
+    function showLogoutModal() {
+      document.getElementById('logoutModal').style.display = 'flex';
+    }
+
+    function closeLogoutModal() {
+      document.getElementById('logoutModal').style.display = 'none';
+    }
+
+    function logout() {
+      closeLogoutModal();
+      setTimeout(() => {
+        window.location.href = '/REPONIJOWEL/components/modals/login1.html'; // Change this to the desired URL
+      }, 1000); // Delay in milliseconds (1 second)
     }
   </script>
 

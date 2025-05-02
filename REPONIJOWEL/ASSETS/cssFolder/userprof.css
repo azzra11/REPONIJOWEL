@@ -1,57 +1,61 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
-  body {
-    background: url(/REPONIJOWEL/ASSETS/imgFolder/schoolppp.png)  no-repeat center center;
-    background-size: cover;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;  
-  }
+body {
+  background: url(/REPONIJOWEL/ASSETS/imgFolder/schoolppp.png) no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  animation: fadeInPage 1s ease-in-out forwards;
+}
 
-  /* Header */
+/* Header */
 .header-container {
-    text-shadow: 1px 1px 5px #000;
-    background-color: #44a347;
-    color: white;
-    padding: 20px;
-    font-size: 24px;  
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-  }
+  text-shadow: 1px 1px 5px #000;
+  background-color: #44a347;
+  color: white;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
 /* Admin Container */
-.admincontiner{
-    
-    padding-bottom: 10px;
+.admincontiner {
+  padding-bottom: 10px;
 }
+
 /* Admin Profile Box */
-.admin-profile{
-    padding: 30px;
-    background-color: #4caf4f;
-    color:white;
-    width: 200px;
-    border-radius: 5rem;  
+.admin-profile {
+  padding: 30px;
+  background-color: #4caf4f;
+  color: white;
+  width: 200px;
+  border-radius: 5rem;
 }
-.white{
+
+.white {
   width: 130px;
   height: 3px;
   background-color: white;
 }
 
-/* Admin p  setting*/
-.admin-profile p{
+/* Admin p setting */
+.admin-profile p {
   display: flex;
   align-items: center;
   padding-left: 10px;
 }
-/*sidebar contents*/
-.sidebar-container{
+
+/* Sidebar contents */
+.sidebar-container {
   height: 380px;
   width: 200px;
   padding: 10px;
@@ -60,12 +64,14 @@
   align-items: center;
   border-radius: 40px;
   overflow-y: auto;
-  padding:  25px ;
+  padding: 25px;
 }
-.sidebar{
+
+.sidebar {
   padding: 13px;
   display: inline-block;
 }
+
 /* Navigation List */
 .nav ul {
   list-style: none;
@@ -97,40 +103,46 @@
   background-color: #2e7d32;
   color: #ffffff;
 }
-.container{
+
+.container {
   padding: 20px 0 0;
   display: inline-block;
   align-items: center;
   justify-content: center;
   position: fixed;
 }
-.maincontent{
+
+.maincontent {
   width: 870px;
   background-color: #4caf4f;
   border-radius: 40px;
 }
-.contentarea{
+
+.contentarea {
   color: white;
   width: 850px;
   padding: 20px;
 }
-.spacerdiv{
-    background-color: white;
-    width: 810px;
-    height: 1px;
-  }
-.spacecontainer{
-    padding: 10px;
-  }
-.infosection{
+
+.spacerdiv {
+  background-color: white;
+  width: 810px;
+  height: 1px;
+}
+
+.spacecontainer {
+  padding: 10px;
+}
+
+.infosection {
   width: 820px;
   height: 350px;
   background-color: white;
   border-radius: 10px;
   padding: 0px;
- 
 }
-.stdidcontainer{
+
+.stdidcontainer {
   color: #2e7d32;
   display: flex;
   align-items: center;
@@ -138,12 +150,14 @@
   font-size: 12px;
   padding: 5px;
 }
-.userprofile{
+
+.userprofile {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.photocontainer{
+
+.photocontainer {
   background-color: #44a347;
   display: flex;
   justify-content: center;
@@ -152,87 +166,109 @@
   height: 60px;
   aspect-ratio: 1rem;
   border-radius: 10px;
-} 
-.userinfocontainer{
-   display: flex;
-   align-items: center; 
 }
-.userpersonalinfo{
+
+.userinfocontainer {
+  display: flex;
+  align-items: center;
+}
+
+.userpersonalinfo {
   padding: 0 15px;
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
 }
-.ayc{
+
+.ayc {
   display: flex;
   align-items: center;
 }
-.ageacontainer{
-  padding: 10px 27px 5px ; 
-  display:flex;
+
+.ageacontainer {
+  padding: 10px 27px 5px;
+  display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.agediv{
+
+.agediv {
   padding: 5px;
   width: 165px;
   height: 12px;
   background-color: #44a347;
   border-radius: 10px;
-  
 }
-.YearCourse-container{
-  padding: 10px 27px 5px ; 
-  display:flex;
+
+.YearCourse-container {
+  padding: 10px 27px 5px;
+  display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.YearCoursediv{
+
+.YearCoursediv {
   padding: 5px;
   width: 150px;
   height: 12px;
   background-color: #44a347;
   border-radius: 10px;
 }
-.emuser{
+
+.emuser {
   display: flex;
   align-items: center;
 }
-.emailcontainer{
-  padding: 5px 37px ; 
+
+.emailcontainer {
+  padding: 5px 37px;
   display: flex;
   align-items: center;
 }
-.emaildiv{
+
+.emaildiv {
   padding: 5px;
   width: 150px;
   height: 12px;
   background-color: #44a347;
   border-radius: 10px;
 }
-.usernamecontainer{
-  padding: 10px 30px 5px ; 
-  display:flex;
+
+.usernamecontainer {
+  padding: 10px 30px 5px;
+  display: flex;
   align-items: center;
 }
-.usernamediv{
+
+.usernamediv {
   padding: 5px;
   width: 170px;
   height: 12px;
   background-color: #44a347;
   border-radius: 10px;
 }
-.bookrentedcontainer{
-  padding: 10px 30px 5px ; 
+
+.bookrentedcontainer {
+  padding: 10px 30px 5px;
   display: block;
   align-items: center;
   justify-content: space-between;
 }
-.bookrenteddiv{
+
+.bookrenteddiv {
   padding: 15px;
-  width: 700ppx;
+  width: 700px;
   height: 120px;
   background-color: #44a347;
   border-radius: 10px;
   align-items: center;
+}
+
+@keyframes fadeInPage {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
 }
