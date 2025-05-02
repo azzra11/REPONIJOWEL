@@ -112,6 +112,78 @@
         opacity: 1;
       }
     }
+
+    /* Book Modal Styles */
+    .book-modal {
+      background-color: #4f8a42;
+      color: white;
+      padding: 30px 40px;
+      border-radius: 20px;
+      width: 350px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .book-modal h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .book-modal label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    .book-modal input, .book-modal select {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .book-modal button {
+      flex: 1;
+      padding: 10px 0;
+      border: none;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      font-family: 'Roboto', sans-serif;
+      font-weight: bold;
+    }
+
+    .submit-btn {
+      background-color: white;
+      color: #4f8a42;
+    }
+
+    .submit-btn:hover {
+      background-color: #e0e0e0;
+    }
+
+    .delete-btn {
+      background-color: #ff4d4d;
+      color: white;
+      text-shadow: 1px 1px 5px #000;
+    }
+
+    .delete-btn:hover {
+      background-color: #e60000;
+    }
   </style>
 </head>
 <body>
@@ -214,13 +286,43 @@
     <!-- end of maincontent -->
   </main>
 
-  <!-- Modal Structure -->
+  <!-- Modal Structure for Logout -->
   <div class="modal-overlay" id="logoutModal">
     <div class="modal">
       <p>Are sure you want to log out?</p>
       <div class="modal-buttons">
         <button onclick="logout()">Yes</button>
         <button onclick="closeModal()">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Structure for Adding Books -->
+  <div class="modal-overlay" id="bookModal">
+    <div class="book-modal">
+      <h2>Southern Philippines Institute of Science & Technology</h2>
+
+      <label for="booktitle">Book Title:</label>
+      <input type="text" id="booktitle" name="booktitle">
+
+      <label for="bookid">Book ID:</label>
+      <input type="text" id="bookid" name="bookid">
+
+      <label for="bookgenre">Book Genre:</label>
+      <input type="text" id="bookgenre" name="bookgenre">
+
+      <label for="bookstatus">Book Status:</label>
+      <select id="bookstatus" name="bookstatus">
+        <option>Available</option>
+        <option>Unavailable</option>
+      </select>
+
+      <label for="rentedby">Rented By:</label>
+      <input type="text" id="rentedby" name="rentedby">
+
+      <div class="button-group">
+        <button type="button" class="delete-btn">Delete</button>
+        <button type="submit" class="submit-btn">Done</button>
       </div>
     </div>
   </div>
@@ -232,6 +334,7 @@
 
     function closeModal() {
       document.getElementById('logoutModal').style.display = 'none';
+      document.getElementById('bookModal').style.display = 'none';
     }
 
     function logout() {
@@ -240,6 +343,45 @@
         window.location.href = '/REPONIJOWEL/components/modals/login1.html'; // Change this to the desired URL
       }, 1000); // Delay in milliseconds (1 second)
     }
+
+    function showBookModal() {
+      document.getElementById('bookModal').style.display = 'flex';
+    }
+
+    // Function to handle the "Done" button click
+    function handleDone() {
+      // Get the values from the input fields
+      const bookTitle = document.getElementById('booktitle').value;
+      const bookId = document.getElementById('bookid').value;
+      const bookGenre = document.getElementById('bookgenre').value;
+      const bookStatus = document.getElementById('bookstatus').value;
+      const rentedBy = document.getElementById('rentedby').value;
+
+      // Perform the action you want, e.g., submit the form or add the book to a list
+      console.log('Book Title:', bookTitle);
+      console.log('Book ID:', bookId);
+      console.log('Book Genre:', bookGenre);
+      console.log('Book Status:', bookStatus);
+      console.log('Rented By:', rentedBy);
+
+      // Close the modal
+      closeModal();
+    }
+
+    // Function to handle the "Delete" button click
+    function handleDelete() {
+      // Perform the delete action, e.g., remove the book from a list
+      console.log('Delete button clicked');
+
+      // Close the modal
+      closeModal();
+    }
+
+    // Attach event listeners to the "Done" and "Delete" buttons
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelector('#bookModal .submit-btn').addEventListener('click', handleDone);
+      document.querySelector('#bookModal .delete-btn').addEventListener('click', handleDelete);
+    });
   </script>
 
 </body>
