@@ -16,6 +16,7 @@
 
   /* Header */
 .header-container {
+    text-shadow: 1px 1px 5px #000;
     background-color: #44a347;
     color: white;
     padding: 20px;

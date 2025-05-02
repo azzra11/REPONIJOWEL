@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <title>rental form </title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-weight: bold;
+      text-shadow: 1px 1px 5px #000;
+      background-color: #e9f0e6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .modal {
+      background-color: #44a347;
+      color: #E6F0DC;
+      padding: 30px 40px;
+      border-radius: 20px;
+      width: 350px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .modal label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    .modal input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .modal input, .modal select {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .button-group {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .modal button {
+      flex: 1;
+      padding: 10px 0;
+      border: none;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      font-family: 'Roboto', sans-serif;
+      font-weight: bold;
+
+    }
+
+    .submit-btn {
+      background-color: white;
+      color: #44a347;
+
+    }
+
+    .submit-btn:hover {
+      background-color: #e0e0e0;
+    }
+    .table-wrapper {
+    overflow-x: auto;
+    background: #fff;
+    padding: 10px 0 0 0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5px;
+    height: 100px;
+  }
+  
+  .user-table thead {
+    color: #E6F0DC;
+    padding: 10px;
+  }
+  
+  .user-table th,
+  .user-table td {
+    padding: 10px 10px;
+    text-align: center;
+    border-bottom: 1px solid #685f5f;
+  }
+  </style>
+</head>
+<body>
+
+<div class="modal">
+  <h2>Southern Philippines Institute of Science & Technology</h2>
+
+  <label for="email">Email:<Title></Title> :</label>
+  <input type="text" id="emailtxt" name="booktitle">
+
+  <label for="name"> Name:</label>
+  <input type="text" id="Nametxt" name="usrnm">
+
+  <label for="bookname">Book name:</label>
+  <input type="text" id="bookname" name="bookgenre">
+
+  <div class="rentedbooks">
+   <p>Rented books:</p>
+   <div class="table-wrapper">
+    <table class="user-table">
+      <thead>
+        <tr>
+        </tr>
+      </thead onclick="">
+      <tbody>
+        <tr> 
+        </tr>
+      </tbody>
+    </table>
+   </div>
+  </div>
+
+  <div class="button-group">
+    <button type="submit" class="submit-btn">Done</button>
+  </div>
+</div>
+
+</body>
+</html>

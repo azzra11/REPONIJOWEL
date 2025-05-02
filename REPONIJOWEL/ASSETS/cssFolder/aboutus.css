@@ -38,6 +38,7 @@ body {
 }
 
 .primary-header {
+  text-shadow: 1px 1px 5px #000;
   align-items: center;
   height: 3rem;
   justify-content: space-between;

@@ -8,7 +8,6 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #388e3c;
       height: 100vh;
       display: flex;
       align-items: center;
@@ -16,8 +15,8 @@
     }
 
     .modal {
-      background-color: #388e3c;
-      color: white;
+      background-color: #44a347;
+      color: #E6F0DC;
       padding: 30px 40px;
       border: 5px solid white;
       border-radius: 30px;
@@ -33,11 +32,13 @@
     }
 
     .buttons {
+      padding: 10px;
       display: flex;
       justify-content: space-around;
     }
 
     .buttons button {
+      width: 90px;
       padding: 10px 20px;
       border: none;
       border-radius: 25px;
@@ -49,14 +50,53 @@
     }
 
     .buttons button:hover {
-      background-color: #e0e0e0;
+      background-color: wheat;
     }
+
+  .table-wrapper {
+    width: 350px;
+    height: 80px;
+    overflow-x: auto;
+    background: #fff;
+    padding: 10px 0 0 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5px;
+  }
+  .user-table th,
+  .user-table td {
+    padding: 10px 10px;
+    text-align: center;
+    border-bottom: 1px solid #685f5f;
+
+  }
   </style>
 </head>
 <body>
 
   <div class="modal">
     <p>Are sure you want to delete this Admin?</p>
+
+    <div class="table-wrapper">
+      <table class="user-table">
+        <thead>
+          <tr>
+           
+          </tr>
+        </thead onclick="">
+        <tbody>
+          <tr> 
+            
+          </tr>
+        </tbody>
+      </table>
+     </div>
+
     <div class="buttons">
       <button onclick="alert('Admin Deleted')">Yes</button>
       <button onclick="alert('Cancelled')">No</button>

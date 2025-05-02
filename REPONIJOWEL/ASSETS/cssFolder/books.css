@@ -19,7 +19,8 @@
   /* Header */
 .header-container {
     background-color: #44a347;
-    color: white;
+    text-shadow: 1px 1px 5px #000;
+    color: #F5F5DC;
     padding: 20px;
     font-size: 24px;  
     font-weight: bold;
