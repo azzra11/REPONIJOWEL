@@ -27,6 +27,7 @@
       border-radius: 20px;
       width: 350px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      position: relative;
     }
 
     .modal h2 {
@@ -43,7 +44,7 @@
       font-size: 14px;
     }
 
-    .modal input, .modal select {
+    .modal input {
       width: 100%;
       padding: 10px;
       border: none;
@@ -54,15 +55,13 @@
 
     .button-group {
       display: flex;
-      align-items: center;
       justify-content: flex-end;
       gap: 10px;
       margin-top: 20px;
     }
 
     .modal button {
-      flex: 1;
-      padding: 10px 0;
+      padding: 10px 20px;
       border: none;
       border-radius: 20px;
       font-size: 14px;
@@ -84,31 +83,32 @@
     .table-wrapper {
       overflow-x: auto;
       background: #fff;
-      padding: 10px 0 0 0;
+      padding: 10px;
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      margin-top: 10px;
     }
 
     .user-table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 5px;
-      height: 100px;
     }
 
-    .user-table thead, .user-table td {
+    .user-table th,
+    .user-table td {
       padding: 10px;
       text-align: center;
-      border-bottom: 1px solid #685f5f;
+      border-bottom: 1px solid #ccc;
     }
 
     .close-btn {
-      background: none;
-      color: #fff;
-      font-size: 18px;
       position: absolute;
-      top: 20px;
-      right: 30px;
+      top: 10px;
+      right: 15px;
+      font-size: 20px;
+      color: #fff;
+      background: none;
+      border: none;
       cursor: pointer;
     }
   </style>
@@ -135,26 +135,26 @@
 
       <div class="booksdetails">
         <h2>The Adventures of Huckleberry Finn</h2>
-        <p class="description">Tells the story of a young boy... (summary truncated for clarity)</p>
+        <p class="description">Tells the story of a young boy... (summary trimmed)</p>
         <p class="summary"><strong>Adventures of Huckleberry Finn</strong> is a picaresque novel...</p>
         <p><strong>Originally published:</strong> December 10, 1884</p>
         <p><strong>Author:</strong> <a href="#">Mark Twain</a></p>
-        <!-- Other book details -->
+        <!-- More details... -->
       </div>
 
     </div>
   </main>
 
-  <!-- Modal HTML -->
+  <!-- Modal -->
   <div class="modal-overlay" id="rentModal">
     <div class="modal">
-      <span class="close-btn" onclick="closeModal()">×</span>
+      <button class="close-btn" onclick="closeModal()">×</button>
       <h2>Southern Philippines Institute of Science & Technology</h2>
 
-      <label for="email">Email:</label>
+      <label for="emailtxt">Email:</label>
       <input type="text" id="emailtxt">
 
-      <label for="name">Name:</label>
+      <label for="Nametxt">Name:</label>
       <input type="text" id="Nametxt">
 
       <label for="bookname">Book name:</label>
@@ -165,22 +165,22 @@
         <div class="table-wrapper">
           <table class="user-table">
             <thead>
-              <tr><th>Title</th></tr>
             </thead>
             <tbody>
-              <tr><td>The Adventures of Huckleberry Finn</td></tr>
+              <tr>
+                <td><!-- You can manually add rented titles here later --></td>
+              </tr>
             </tbody>
           </table>
         </div>
       </div>
 
       <div class="button-group">
-        <button type="submit" class="submit-btn" onclick="closeModal()">Done</button>
+        <button type="button" class="submit-btn" onclick="closeModal()">Done</button>
       </div>
     </div>
   </div>
 
-  <!-- JavaScript to control modal -->
   <script>
     function openModal() {
       document.getElementById('rentModal').style.display = 'flex';
