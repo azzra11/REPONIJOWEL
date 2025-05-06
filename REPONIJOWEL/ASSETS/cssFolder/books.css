@@ -1,5 +1,4 @@
 * {
-
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,10 +13,9 @@ body {
   font-family: sans-serif;
   animation: fadeInPage 1s ease-in-out forwards;
 }
-
 /* Header */
 .header-container {
-    background-color: #44a347;
+  background-color: #44a347;
     text-shadow: 1px 1px 5px #000;
     color: #F5F5DC;
     padding: 20px;
@@ -27,96 +25,68 @@ body {
     align-items: center;
   }
   /* Admin Container */
-  .admincontiner{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 10px;
-  }
-  /* Admin Profile Box */
-  .admin-profile{
-    padding: 20px;
-    background-color: #4caf4f;
-    color:white;
-    width: 200px;
-    border-radius: 2rem;  
-  }
-  .pin{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    width: 190px;
-    gap: 0.5rem;
-  }
-  .usrnm{
-    width: 150px;
-  }
-  .pcontainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: white;
-    border-radius: 100px;
-  }
-  .white{
-  width: 150px;
-  height: 3px;
-  background-color: white;
-  }
-  
-  /* Admin p  setting*/
-  .admin-profile p{
+.admincontiner{
   display: flex;
   align-items: center;
-  padding-left: 10px;
-  }
-
-  
-/*sidebar contents*/
-.sidebar-container{
-  background-color: #44a347;
-  text-shadow: 1px 1px 5px #000;
-  color: #F5F5DC;
-  padding: 20px;
-  font-size: 24px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-}
-
-/* Admin Container */
-.admincontiner {
+  justify-content: center;
   padding-bottom: 10px;
 }
-
 /* Admin Profile Box */
-.admin-profile {
-  padding: 30px;
+.admin-profile{
+  padding: 20px;
   background-color: #4caf4f;
-  color: white;
+  color:white;
   width: 200px;
-  border-radius: 5rem;
+  border-radius: 2rem;  
 }
-
-.white {
-  width: 130px;
-  height: 3px;
-  background-color: white;
-}
-
-/* Admin p setting */
-.admin-profile p {
+.emailcontainer{
   display: flex;
   align-items: center;
-  padding-left: 10px;
+  justify-content: flex-start;
+}
+.emaildiv{
+  height: 15px;
+  width: 200px;
+  border-radius: 20px;
+  background-color: #357d38;
+}
+.pin{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 190px;
+  gap: 0.5rem;
+}
+.usrnm{
+  width: 150px;
+}
+.pcontainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 100px;
+}
+.white{
+width: 150px;
+height: 3px;
+background-color: white;
 }
 
-/* Sidebar contents */
-.sidebar-container {
-  height: 380px;
+/* Admin p  setting*/
+.admin-profile p{
+display: flex;
+align-items: center;
+padding-left: 5px;
+}
+
+
+/*sidebar contents*/
+.sidebar-container{
+  height: 395px;
   width: 200px;
   padding: 10px;
   background-color: #44a347;
@@ -124,18 +94,12 @@ body {
   align-items: center;
   border-radius: 40px;
   overflow-y: auto;
-  padding: 25px;
+  padding:  25px ;
 }
-
 .sidebar{
   padding: 20px 10px ;
-}
-.sidebar {
-  padding: 13px;
-
   display: inline-block;
 }
-
 /* Navigation List */
 .nav ul {
   list-style: none;
@@ -153,7 +117,7 @@ body {
   color: #F5F5DC;
   font-size: 14px;
   border-radius: 8px;
-  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* Icons inside Sidebar */
@@ -166,7 +130,6 @@ body {
 .nav ul li a:hover {
   background-color: #2e7d32;
   color: #ffffff;
-  transform: scale(1.05);
 }
 
 .container {
@@ -261,12 +224,6 @@ body {
   margin-top: 5px;
   height: 360px;
   }
-  
-  .user-table thead {
-
-  height: 300px;
-}
-
 .user-table thead {
   background-color: #ce0101;
   color: #4caf4f;
@@ -282,7 +239,9 @@ body {
 
 .user-table tbody tr:hover {
   background-color: wheat;
+  transform: scale(00.5rem);
   }
+
 /* Modal overlay */
 .modal-overlay {
   position: fixed;
@@ -519,13 +478,3 @@ body {
    outline: none;
    background: none;
 }
-
-@keyframes fadeInPage {
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 1;
-  }
-}
-

@@ -1,13 +1,23 @@
-document.getElementById('showPassword').addEventListener('change', function () {
-  const passwordField = document.getElementById('password');
-  const confirmPasswordField = document.getElementById('Cpassword');
 
-  const type = this.checked ? 'text' : 'password';
+  document.getElementById('showPassword').addEventListener('change', function () {
+    const passwordField = document.getElementById('password');
+    const confirmPasswordField = document.getElementById('Cpassword');
 
-  if (passwordField) passwordField.type = type;
-  if (confirmPasswordField) confirmPasswordField.type = type;
-});
+    const type = this.checked ? 'text' : 'password'; 
 
+    if (passwordField) passwordField.type = type;
+    if (confirmPasswordField) confirmPasswordField.type = type;
+  });
+
+  document.getElementById('showPasswordedit').addEventListener('change', function () {
+    const passwordField = document.getElementById('passwordedit');
+    const confirmPasswordField = document.getElementById('Cpasswordedit');
+
+    const type = this.checked ? 'text' : 'password';
+
+    if (passwordField) passwordField.type = type;
+    if (confirmPasswordField) confirmPasswordField.type = type;
+  });
   function showModal() {
    document.getElementById('adminModal').style.display = 'flex';
   }
