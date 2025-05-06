@@ -120,7 +120,7 @@
           <td></td>
           <td></td>
           <td>
-            <button class="btn edit-btn" onclick="showBookedit()">View</button>
+            <button class="btn edit-btn" onclick="showBookuser()">View</button>
           </td>
         </tr>
       </tbody>
@@ -136,20 +136,112 @@
   <!-- end of maincontent -->
 </main>
 
-<!-- Modal Structure for Logout -->
-<div class="modal-overlay" id="logoutModal">
-  <div class="modal">
-    <p>Are sure you want to log out?</p>
-    <div class="modal-buttons">
-      <button onclick="logout()">Yes</button>
-      <button onclick="closeModal()">No</button>
-    </div>
-  </div>
-</div>
 
 <!-- modal userinfo -->
-  <div class="modal-oaverlay-user" id="modal-">
+  <div class="modal-overlay" id="modal-user"> 
+    <div class="modal">
 
+      <div class="xbtn">
+        <button onclick="closeModal()" class="close-btn">&times;</button>
+      </div>
+
+      <div class="contentareauser">
+        <h1>User:</h1>
+  <!-- spacecontainer start -->
+      <div class="spacecontainer">
+        <div class="spacerdiv"></div>
+      </div>
+  <!-- spacecontainer end -->
+
+  <!-- infosection start -->
+      <div class="infosection">
+
+  <!-- stdidcontainer start -->
+    <div class="stdidcontainer">
+      <div class="studidname" style="font-weight: bold; color: #2e7d32;">Student id: </div>
+      <div class="studid"><span style="font-weight: 50; color: #2e7d32;"> c22-4587-01</span></div>
+    </div>
+  <!-- stdidcontainer end -->
+
+  <!-- userinfo start -->
+    <div class="userinfocontainer">
+
+  <!-- userprofile start -->
+    <div class="userprofile" style="padding: 10px;">
+
+  <!-- photocontainer Start -->
+    <div class="photocontainer">
+  <!-- photodiv Start -->
+     <div class="photo"><span class="material-symbols-outlined">person_add</span></div>
+  <!-- photodiv end-->
+    </div>
+  <!-- photocontainer end -->
+
+  <!-- user name  start-->
+    <div class="usernamecontainer">
+      <div class="username" style="gap: 5px;">
+        <h2 style="color: #44a347; margin: 0;">John Doe</h2>
+        <hr style="background-color: #44a347; padding: 0.5px; width: 200px;">
+      </div>
+    </div>
+  <!-- user name  end-->
+    </div>
+  <!-- userprofile end -->
+    </div>
+  <!--end of infosection-->
+
+  <!-- userpersonalinfo start -->
+  <div class="userpersonalinfo">
+
+  <!-- start of ageyearcorse -->
+  <div class="ayc">
+
+  <!-- agecontainer start -->
+  <div class="ageacontainer">
+    <div class="age" style="font-weight: bold; color: #44a347;">Age: </div>
+    <div class="agediv"></div>
+  </div>
+  <!-- agecontainer end -->
+  </div>
+  <!-- userpersonalinfo end -->
+
+  <!-- start of Year&Course -->
+  <div class="YearCourse-container">
+    <div class="YearCourse" style="font-weight: bold; color: #44a347;">Year&Course: </div>
+    <div class="YearCoursediv"></div>
+  </div>
+  <!-- end of Year&Course -->
+  </div>
+  <!-- end of ageyearcorse -->
+
+  <!-- start  emuser-->
+  <div class="emuser">
+
+  <!-- start of email -->
+  <div class="emailcontaineruser">
+    <div class="email" style="font-weight: bold; color: #44a347;">Email: </div>
+    <div class="emaildivuser"></div>
+  </div>
+  <!-- end of email -->
+
+  <!-- start of username -->
+  <div class="usernamecontainer">
+    <div class="username" style="font-weight: bold; color: #44a347;">Username: </div>
+    <div class="usernamediv"></div>
+  </div>
+  <!-- end of username -->
+
+  </div>
+  <!-- start  emuser-->
+  <div class="bookrentedcontainer">
+    <div class="bookrented" style="font-weight: bold; color: #44a347;">Book rented: </div>
+    <div class="bookrenteddiv"></div>
+  </div>
+
+  </div> <!--end of maincontent-->
+    </div>
   </div> 
+
+  <script src="/REPONIJOWEL/jsfolder/user.js"></script>
 </body>
 </html>

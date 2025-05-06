@@ -104,7 +104,7 @@ body {
   color: #ffffff;
 }
 
-.container {
+.containeruser{
   padding: 20px 0 0;
   display: inline-block;
   align-items: center;
@@ -112,7 +112,7 @@ body {
   position: fixed;
 }
 
-.maincontent {
+.maincontentuser {
   width: 870px;
   background-color: #4caf4f;
   border-radius: 40px;

@@ -206,81 +206,213 @@ padding: 10px;
   background-color: wheat;
   transform: scale(00.5rem);
 }
-/* Modal overlay */
-.modal-overlay {
+.modal-overlay{
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: 3px solid white;
   display: none;
   justify-content: center;
   align-items: center;
   animation: fadeIn 0.3s ease-in-out;
 }
-/* Modal box */
-.modal {
-  background: white;
-  border: 6px solid #3f9142;
+.modal{
+  background-color: #44a347;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 20px;
+  width: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: scaleUp 0.3s ease-in-out;
+  border: 5px solid wheat;
+}
+.container{
+  padding: 10px 0 0;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+}
+.xbtn{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 0 20px 0; 
+  height: 10px;
+}
+.close-btn{
+   font-size: 1.5rem;
+   font-weight: bold;
+   cursor: pointer;
+   border: none;
+   outline: none;
+   background: none;
+}
+.close-btn:hover{
+  transform: scale(1.5);
+}
+.done-btn:hover{
+  background-color: wheat;
+  transform: scale(1.05);
+}
+.containeruser{
+  padding: 20px 0 0;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+}
+
+.maincontentuser {
+  width: auto;
+  background-color: #4caf4f;
   border-radius: 40px;
-      padding: 30px;
-      text-align: center;
-      max-width: 400px;
-      animation: scaleUp 0.3s ease-in-out;
-    }
+}
 
-    .modal p {
-      font-size: 20px;
-      color: #3f9142;
-      margin-bottom: 20px;
-    }
+.contentarea {
+  color: white;
+  width: auto;
+  padding: 20px;
+}
 
-    .modal-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
+.spacerdiv {
+  background-color: white;
+  width: 810px;
+  height: 1px;
+}
 
-    .modal button {
-      background-color: #3f9142;
-      color: white;
-      border: none;
-      padding: 10px 30px;
-      font-size: 16px;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background-color 0.3s, transform 0.3s;
-    }
+.spacecontainer {
+  padding: 10px;
+}
 
-    .modal button:hover {
-      background-color: #357d38;
-      transform: scale(1.05);
-    }
+.infosection {
+  width: auto;
+  min-height: 350px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 0 0 30px 0;
+  color: #2e7d32;
+}
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
+.stdidcontainer { 
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 12px;
+  padding: 5px;
+}
 
-    @keyframes scaleUp {
-      from {
-        transform: scale(0.9);
-      }
-      to {
-        transform: scale(1);
-      }
-    }
+.userprofile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-    @keyframes fadeInPage {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
+.photocontainer {
+  background-color: #44a347;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  aspect-ratio: 1rem;
+  border-radius: 10px;
+}
+
+.userinfocontainer {
+  display: flex;
+  align-items: center;
+}
+
+.userpersonalinfo {
+  padding: 0 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ayc {
+  display: flex;
+  align-items: center;
+}
+
+.ageacontainer {
+  padding: 10px 27px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.agediv {
+  padding: 5px;
+  width: 165px;
+  height: 12px;
+  background-color: #44a347;
+  border-radius: 10px;
+}
+
+.YearCourse-container {
+  padding: 10px 27px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.YearCoursediv {
+  padding: 5px;
+  width: 150px;
+  height: 12px;
+  background-color: #44a347;
+  border-radius: 10px;
+}
+
+.emuser {
+  display: flex;
+  align-items: center;
+}
+
+.emailcontaineruser{
+  padding: 5px 37px;
+  display: flex;
+  align-items: center;
+}
+
+.emaildivuser{
+  padding: 5px;
+  width: 150px;
+  height: 12px;
+  background-color: #44a347;
+  border-radius: 10px;
+}
+
+.usernamecontainer {
+  padding: 10px 30px 5px;
+  display: flex;
+  align-items: center;
+}
+
+.usernamediv {
+  padding: 5px;
+  width: 170px;
+  height: 12px;
+  background-color: #44a347;
+  border-radius: 10px;
+}
+
+.bookrentedcontainer {
+  padding: 10px 30px 5px;
+  display: block;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bookrenteddiv {
+  padding: 15px;
+  width: auto;
+  height: 120px;
+  background-color: #44a347;
+  border-radius: 10px;
+  align-items: center;
+}
