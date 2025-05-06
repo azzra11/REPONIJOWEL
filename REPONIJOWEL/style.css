@@ -1,0 +1,70 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+}
+.btn-container {
+    text-align: center;
+}
+#Table1 {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#Table1 td, #Table1 th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#Table1 tr:nth-child(even){background-color: #f2f2f2;}
+
+#Table1 tr:hover {background-color: #ddd;}
+
+#Table1 th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #006e7c;
+    color: white;
+    font-size: 15pt;
+}
+
+input[type="button"]{
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #529ff7, #0055c5);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  height: 40px;
+  line-height: 40px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  z-index: 9;
+  border: 0;
+  transition: box-shadow .2s;
+}
+
+input[type="button"]:hover {
+  box-shadow: rgba(0, 118, 253, 0.5) 0 3px 8px;
+}
