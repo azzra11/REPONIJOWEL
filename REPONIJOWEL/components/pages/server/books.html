@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Southern Philippines Institute of Science & Technology</title>
+
+  <!-- icon -->
+  <link rel="icon" type="image/png" href="/REPONIJOWEL/ASSETS/imgFolder/school-logo-large.png" />
+
+  <!--  CSS -->
+  <link rel="stylesheet" href="/REPONIJOWEL/ASSETS/cssFolder/books.css" />
+
+  <!-- Google Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <!-- Font link -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- Roboto Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <img src="/REPONIJOWEL/ASSETS/imgFolder/school-logo-large.png" alt="School Logo" style="height: 40px; margin-right: 10px;" />
+      <p>Southern Philippines Institute of Science & Technology</p>
+    </div>
+  </header>
+
+  <!-- admin profile-->
+  <aside class="sidebar">
+      <div class="admincontiner">
+       <div class="admin-profile">
+         <div class="pin">
+          <div class="pcontainer">
+            <span class="material-symbols-outlined" style="color: black;">account_circle</span>
+          </div>
+            <div class="usrnm">
+              <h1 style="font-weight:bolder; font-size: 20px;">Admin Doe</h1>
+            </div>
+         </div>
+          <div class="white"></div>
+       </div>
+      </div> 
+
+    <!-- Sidebar -->
+    <div class="sidebar-container">
+      <nav class="nav">
+        <ul>
+          <li>
+              <a href="/REPONIJOWEL/components/pages/server/user.html"><span class="material-symbols-outlined">person</span> User</a>
+            </li>
+            <li>
+              <a href="/REPONIJOWEL/components/pages/server/admin.html"><span class="material-symbols-outlined">admin_panel_settings</span> Admin</a>
+            </li>
+            <li>
+              <a href="/REPONIJOWEL/components/pages/server/books.html"><span class="material-symbols-outlined">book</span> Books</a>
+            </li>
+            <li>
+              <a href="#" onclick="showLogoutModal()"><span class="material-symbols-outlined">logout</span> Log out</a>
+            </li>
+      </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <main class="container">
+    <!-- Start of maincontent -->
+      <div class="maincontent">
+
+    <!-- start of adminprofile -->
+        <div class="adminprofile">
+          <h1>Books: </h1>
+
+    <!-- start of adminprofilebtn -->
+        <div class="adminprofilebtn">
+          <button class="add-admin" onclick="showBookModal()"><span class="material-symbols-outlined">book</span><p>Add Books</p></button>
+        </div>
+    <!-- end of adminprofilebtn -->
+
+        </div>
+    <!-- end of adminprofile -->
+
+    <!-- start of Spacee div -->
+          <div class="spacecontainer">
+            <div class="spacerdiv"></div>
+          </div>
+    <!-- end of Spacee div -->
+
+    <!--start of table-wrappper -->
+      <div class="table-wrappper">
+    <!-- start of  table -->
+    <div class="table-wrapper">
+      <table class="user-table">
+        <thead>
+          <tr>
+            <td>Book title</td>
+            <td>Book id </td>
+            <td>Book genre</td>
+            <td>Book status</td>
+            <td>Rented by</td>
+            <td>Action</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <button class="btn edit-btn" onclick="showBookedit()">Edit</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end of table -->
+      </div>
+    <!-- end of table  -->
+
+      </div>
+    <!-- end of maincontent -->
+  </main>
+  
+  <!-- Modal Structure for Adding Books -->
+  <div class="modal-overlay" id="bookModal">
+    <div class="book-modal">
+
+      <div class="xbtn">
+        <button onclick="closeModal()" class="close-btn">&times;</button>
+         </div>
+
+         <div class="modal-header" >
+        <div class="title"><h2>Southern Philippines Institute of Science & Technology</h2></div>
+      </div>
+   
+
+      <label for="booktitle">Book Title:</label>
+      <input type="text" id="booktitle" name="booktitle">
+
+      <label for="bookid">Book ID:</label>
+      <input type="text" id="bookid" name="bookid">
+
+      <label for="bookgenre">Book Genre:</label>
+      <input type="text" id="bookgenre" name="bookgenre">
+
+      <label for="bookstatus">Book Description:</label>
+
+      <div class="bookdescrip">
+        <form action="">
+
+        </form>
+      </div>
+
+      <div class="button-group">
+        <button type="submit" class="submit-btn" onclick="closeModal()">Done</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal-overlay" id="bookedit">
+    <div class="book-modal">
+
+      <div class="xbtn">
+        <button onclick="closeModal()" class="close-btn">&times;</button>
+         </div>
+
+         <div class="modal-header" >
+        <div class="title"><h2>Southern Philippines Institute of Science & Technology</h2></div>
+      </div>
+
+      <label for="booktitle">Book Title:</label>
+      <input type="text" id="booktitle" name="booktitle">
+
+      <label for="bookid">Book ID:</label>
+      <input type="text" id="bookid" name="bookid">
+
+      <label for="bookgenre">Book Genre:</label>
+      <input type="text" id="bookgenre" name="bookgenre">
+
+      <label for="bookstatus">Book Status:</label>
+      <select id="bookstatus" name="bookstatus" >
+        <option >Available</option>
+        <option >Unavailable</option>
+      </select>
+
+      <label for="rentedby">Rented By:</label>
+      <input type="text" id="rentedby" name="rentedby">
+
+      <div class="button-group">
+        <button type="button" class="delete-btn" onclick="confirmDelete()">Delete</button>
+        <button type="submit" class="submit-btn" onclick="closeModal()">Done</button>
+      </div>
+    </div>
+  </div>
+
+<!-- books delete -->
+<div class="modalDelete" id="modalDelete">
+ <div class="modalcontainer">
+   
+  <div class="ybtn">
+    <button onclick="closeModal()" class="close-btn">&times;</button>
+  </div>
+
+  <div class="modal-header-delete" >
+    <div class="title-delete"><p>Are sure you want to delete the following book ?</p></div>
+  </div>
+     <div class="bookSeleted">
+
+    </div>
+   <div class="buttons-delete">
+    <button onclick="closeModal()" class="yesbtn">Yes</button>
+    <button onclick="closeModal()" class="nobtn">No</button>
+   </div>
+  </div>
+</div>
+
+
+  <script src="/REPONIJOWEL/jsfolder/books.js"></script>
+</body>
+</html>

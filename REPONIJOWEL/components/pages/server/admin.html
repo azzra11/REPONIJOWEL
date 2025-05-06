@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Southern Philippines Institute of Science & Technology</title>
+
+  <!-- icon -->
+  <link rel="icon" type="image/png" href="/REPONIJOWEL/ASSETS/imgFolder/school-logo-large.png" />
+
+  <!--  CSS -->
+  <link rel="stylesheet" href="/REPONIJOWEL/ASSETS/cssFolder/admin.css" />
+
+  <!-- Google Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <script></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <img src="/REPONIJOWEL/ASSETS/imgFolder/school-logo-large.png" alt="School Logo" style="height: 40px; margin-right: 10px;" />
+      <p>Southern Philippines Institute of Science & Technology</p>
+    </div>
+  </header>
+
+  <!-- admin profile-->
+  <aside class="sidebar">
+    <div class="admincontiner">
+      <div class="admin-profile">
+        <div class="pin">
+         <div class="pcontainer">
+           <span class="material-symbols-outlined" style="color: black;">account_circle</span>
+         </div>
+           <div class="usrnm">
+             <h1 style="font-weight:bolder; font-size: 20px;">Admin Doe</h1>
+           </div>
+        </div>
+         <div class="white"></div>
+      </div>
+     </div> 
+
+     
+    <!-- Sidebar -->
+    <div class="sidebar-container">
+      <nav class="nav">
+        <ul>
+          <li>
+              <a href="/REPONIJOWEL/components/pages/server/user.html"><span class="material-symbols-outlined">person</span> User</a>
+            </li>
+            <li>
+              <a href="/REPONIJOWEL/components/pages/server/admin.html"><span class="material-symbols-outlined">admin_panel_settings</span> Admin</a>
+            </li>
+            <li>
+              <a href="/REPONIJOWEL/components/pages/server/books.html"><span class="material-symbols-outlined">book</span> Books</a>
+            </li>
+            <li>
+              <a href="#" onclick="showLogoutModal()"><span class="material-symbols-outlined">logout</span> Log out</a>
+            </li>
+      </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <main class="container">
+<!-- Start of maincontent -->
+      <div class="maincontent">
+
+    <!-- start of adminprofile -->
+        <div class="adminprofile">
+          <h1>Admin Profile</h1>
+
+    <!-- start of adminprofilebtn -->
+        <div class="adminprofilebtn">
+          <button class="add-admin" onclick="showModal()"><span class="material-symbols-outlined">person_add</span><p>Add Admin</p></button>
+        </div>
+    <!-- end of adminprofilebtn -->
+
+        </div>
+    <!-- end of adminprofile -->
+
+    <!-- start of Spacee div -->
+          <div class="spacecontainer">
+            <div class="spacerdiv"></div>
+          </div>
+    <!-- end of Spacee div -->
+
+    <!--start of table-wrappper -->
+      <div class="table-wrappper">
+    <!-- start of  table -->
+    <div class="table-wrapper">
+      <table class="user-table">
+        <thead>
+          <tr>
+            <td>Admin id </td>
+            <td>Admin name </td>
+            <td>Admin permission</td>
+            <td>Username</td>
+            <td>School position</td>
+            <td>Action</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <button class="btn edit-btn" onclick="showModalEdit()">Edit</button>
+              <button class="btn delete-btn" onclick="modalDelete()">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- end of table -->
+      </div>
+    <!-- end of table  -->
+
+      </div>
+    <!-- end of maincontent -->
+  </main>
+
+<!-- Admin Modal Structure -->
+  <!-- Admin Modal Structure -->
+  <div class="modal-overlay" id="adminModal">
+    <div class="modal">
+      
+      <div class="xbtn">
+        <button onclick="closeModal()" class="close-btn">&times;</button>
+      </div>
+
+      <div class="modal-header" >
+        <div class="title"><h2>Southern Philippines Institute of Science & Technology</h2></div>
+      </div>
+
+      <label for="fullname">Full name :</label>
+      <input type="text" id="fullname" name="fullname">
+
+      <label for="username">Username :</label>
+      <input type="text" id="username" name="username">
+
+      <label for="school-position">School position :</label>
+      <input type="text" id="school-position" name="school-position">
+
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email">
+
+      <label for="password">Password :</label>
+      <input type="password" id="password" name="password">
+      
+      <label for="password">Confirm Password :</label>
+      <input type="password" id="Cpassword" name="password">
+      
+      <div class="showpass">
+        <label class="showPassword">
+          <input type="checkbox" id="showPassword" class="showPass" style="color: #E6F0DC;">
+          Show Password
+        </label>
+      </div>
+
+      <button type="submit" onclick="closeModal()" class="done-btn">Done</button>
+    </div>
+  </div>
+
+<!-- admin edit -->
+  <div class="modal-overlay" id="adminEdit">
+    <div class="modal">
+      
+      <div class="xbtn">
+        <button onclick="closeModal()" class="close-btn">&times;</button>
+      </div>
+
+      <div class="modal-header" >
+        <div class="title"><h2>Southern Philippines Institute of Science & Technology</h2></div>
+      </div>
+
+      <label for="fullname">Full name :</label>
+      <input type="text" id="fullname" name="fullname">
+
+      <label for="username">Username :</label>
+      <input type="text" id="username" name="username">
+
+      <label for="school-position">School position :</label>
+      <input type="text" id="school-position" name="school-position">
+
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email">
+
+      <label for="password">Password :</label>
+      <input type="password" id="password" name="password">
+      
+      <label for="password">Confirm Password :</label>
+      <input type="password" id="Cpassword" name="password">
+      
+      <div class="showpass">
+        <label class="showPassword">
+          <input type="checkbox" id="showPassword" class="showPass" style="color: #E6F0DC;">
+          Show Password
+        </label>
+      </div>
+
+      <button type="submit" onclick="closeModal()" class="done-btn">Change</button>
+    </div>
+  </div>
+  
+  <!-- books delete -->
+<div class="modalDelete" id="modalDelete">
+  <div class="modalcontainer">
+    
+   <div class="ybtn">
+     <button onclick="closeModal()" class="close-btn">&times;</button>
+   </div>
+ 
+   <div class="modal-header-delete" >
+     <div class="title-delete"><p>Are sure you want to delete this Admin?</p></div>
+   </div>
+      <div class="bookSeleted">
+ 
+     </div>
+    <div class="buttons-delete">
+     <button onclick="closeModal()" class="yesbtn">Yes</button>
+     <button onclick="closeModal()" class="nobtn">No</button>
+    </div>
+   </div>
+ </div>
+ 
+<script src="/REPONIJOWEL/jsfolder/admin.js"></script>
+
+</body>
+</html>

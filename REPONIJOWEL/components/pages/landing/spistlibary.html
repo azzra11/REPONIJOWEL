@@ -19,8 +19,9 @@
   />
 
   <!-- JavaScript -->
-  <script src="/jsFolder/schooljs.js" defer></script>
+  <script src="/REPONIJOWEL/jsfolder/login.js" defer></script>
 
+ 
   <title>Southern Philippines Institute of Science & Technology</title>
 </head>
 
@@ -32,26 +33,25 @@
     <nav>
       <ul class="primaryNavigation flex">
         <li>
-          <a href="/REPONIJOWEL/components/pages/spistlibary.html ">
+          <a href="/REPONIJOWEL/components/pages/landing/spistlibary.html ">
             <span class="material-symbols-outlined">home</span> Home
           </a>
         </li>
         <li>
-          <a href="/REPONIJOWEL/components/pages/vision.html">
+          <a href="/REPONIJOWEL/components/pages/landing/vision.html">
             <span class="material-symbols-outlined">star</span> Vision
           </a>
         </li>
         <li>
-          <a href="/REPONIJOWEL/components/pages/aboutus.html">
+          <a href="/REPONIJOWEL/components/pages/landing/contactus.html">
             <span class="material-symbols-outlined">groups</span>About Us
           </a>
         </li>
         <li>
-          <a href="/REPONIJOWEL/components/pages/contactus.html">
+          <a href="/REPONIJOWEL/components/pages/landing/contactus.html">
             <span class="material-symbols-outlined">call</span> Contact Us
           </a>
         </li>
-
       </ul>
     </nav>
   </header>
@@ -75,46 +75,9 @@
     </div>
   </section>
   <section class="visionsc">
-    <div class="visionmain">
-       
+    <div class="visionmain">   
     </div>
   </section>
   </main>
-  
-
-  <!-- Optional inline JS fallback -->
-  <script>
-    function login() {
-  const body = document.body;
-  body.classList.add('fade-out');
-
-  setTimeout(() => {
-    window.location.href = "/REPONIJOWEL/components/modals/login1.html";
-  }, 500); // Match this duration with the CSS transition duration
-}
-
-function signup() {
-  const body = document.body;
-  body.classList.add('fade-out');
-
-  setTimeout(() => {
-    window.location.href = "/REPONIJOWEL/components/modals/login4.html";
-  }, 500); // Match this duration with the CSS transition duration
-}
-
-// Add event listeners to the navigation links
-document.querySelectorAll('.primaryNavigation a').forEach(link => {
-  link.addEventListener('click', function(event) {
-    event.preventDefault();
-    const body = document.body;
-    body.classList.add('fade-out');
-
-    setTimeout(() => {
-      window.location.href = this.getAttribute('href');
-    }, 500); // Match this duration with the CSS transition duration
-  });
-});
-
-  </script>
 </body>
 </html>
