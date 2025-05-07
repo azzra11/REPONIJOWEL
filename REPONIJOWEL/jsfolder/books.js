@@ -2,6 +2,7 @@ function closeModal() {
     document.getElementById('bookModal').style.display = 'none';
     document.getElementById('bookedit').style.display = 'none';
     document.getElementById('modalDelete').style.display = 'none';
+    document.getElementById('logoutModal').style.display = 'none';
   }
   function confirmDelete() {
     document.getElementById('modalDelete').style.display = 'flex';
@@ -11,6 +12,9 @@ function closeModal() {
   }
   function showBookedit() {
     document.getElementById('bookedit').style.display = 'flex';
+  }
+  function showLogoutModal() {
+    document.getElementById('logoutModal').style.display = 'flex';
   }
   function logout() {
     closeModal();

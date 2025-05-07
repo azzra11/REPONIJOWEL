@@ -21,6 +21,9 @@
   function showModal() {
    document.getElementById('adminModal').style.display = 'flex';
   }
+  function showModallogout() {
+    document.getElementById('modallogout').style.display = 'flex';
+   }
   function showModalEdit() {
     document.getElementById('adminEdit').style.display = 'flex';
   }
@@ -32,16 +35,15 @@
      document.getElementById('adminModal').style.display = 'none';
      document.getElementById('adminEdit').style.display = 'none';
      document.getElementById('modalDelete').style.display = 'none';
+     document.getElementById('logoutModal').style.display = 'none';
   }
   function showLogoutModal() {
      document.getElementById('logoutModal').style.display = 'flex';
   }
-  function closeLogoutModal() {
-     document.getElementById('logoutModal').style.display = 'none';
-  }
+  
   function logout() {
-     closeLogoutModal();
-     setTimeout(() => {
-       window.location.href = '/REPONIJOWEL/components/modals/login1.html'; // Change this to the desired URL
+    closeModal();
+    setTimeout(() => {
+      window.location.href = '/REPONIJOWEL/components/modals/login1.html'; // Change this to the desired URL
     }, 1000); // Delay in milliseconds (1 second)
   }

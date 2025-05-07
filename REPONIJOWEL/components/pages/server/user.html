@@ -51,20 +51,20 @@
   <!-- Sidebar -->
   <div class="sidebar-container">
     <nav class="nav">
-        <ul>
-            <li>
-                <a href="/REPONIJOWEL/components/pages/server/user.html"><span class="material-symbols-outlined">person</span> User</a>
-              </li>
-              <li>
-                <a href="/REPONIJOWEL/components/pages/server/admin.html"><span class="material-symbols-outlined">admin_panel_settings</span> Admin</a>
-              </li>
-              <li>
-                <a href="/REPONIJOWEL/components/pages/server/books.html"><span class="material-symbols-outlined">book</span> Books</a>
-              </li>
-              <li>
-                <a href="#" onclick="showLogoutModal()"><span class="material-symbols-outlined">logout</span> Log out</a>
-              </li>
-        </ul>
+      <ul>
+          <li>
+            <a href="/REPONIJOWEL/components/pages/server/user.html"><span class="material-symbols-outlined">person</span> User</a>
+          </li>
+          <li>
+            <a href="/REPONIJOWEL/components/pages/server/admin.html"><span class="material-symbols-outlined">admin_panel_settings</span> Admin</a>
+          </li>
+          <li>
+            <a href="/REPONIJOWEL/components/pages/server/books.html"><span class="material-symbols-outlined">book</span> Books</a>
+          </li>
+          <li>
+            <a href="#" onclick="showLogoutModal()"><span class="material-symbols-outlined">logout</span> Log out</a>
+          </li>
+      </ul>
     </nav>
   </div>
 </aside> 
@@ -129,19 +129,16 @@
   <!-- end of table -->
     </div>
   <!-- end of table  -->
-  <div class="selected">
-    <button></button>
-  </div>
     </div>
   <!-- end of maincontent -->
 </main>
 
 
 <!-- modal userinfo -->
-  <div class="modal-overlay" id="modal-user"> 
+  <div class="modal-overlay" id="modal-admin-user"> 
     <div class="modal">
 
-      <div class="xbtn">
+      <div class="close-btn-container">
         <button onclick="closeModal()" class="close-btn">&times;</button>
       </div>
 
@@ -242,6 +239,23 @@
     </div>
   </div> 
 
+<!-- log out -->
+<div class="modallogout" id="logoutModal">
+  <div class="logoutcontainer">
+    
+   <div class="a-btn-container">
+     <button onclick="closeModal()" class="abtn">&times;</button>
+   </div>
+ 
+   <div class="modal-header-logout" >
+     <div class="title-logout"><p>Are sure you want to log out ?</p></div>
+   </div>
+    <div class="buttons-logout">
+     <button onclick="logout()" class="confirmbtn">Yes</button>
+     <button onclick="closeModal()" class="declinebtn">No</button>
+    </div>
+   </div>
+ 
   <script src="/REPONIJOWEL/jsfolder/user.js"></script>
 </body>
 </html>

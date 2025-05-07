@@ -228,18 +228,12 @@ padding: 10px;
   animation: scaleUp 0.3s ease-in-out;
   border: 5px solid wheat;
 }
-.container{
-  padding: 10px 0 0;
-  display: inline-block;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-}
-.xbtn{
+
+.close-btn-container{
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 0 0 20px 0; 
+  padding:20px; 
   height: 10px;
 }
 .close-btn{
@@ -265,16 +259,16 @@ padding: 10px;
   position: fixed;
 }
 
-.maincontentuser {
+.maincontentuser{
   width: auto;
   background-color: #4caf4f;
   border-radius: 40px;
 }
 
-.contentarea {
+.contentarea{
   color: white;
   width: auto;
-  padding: 20px;
+  padding: 10px;
 }
 
 .spacerdiv {
@@ -415,4 +409,116 @@ padding: 10px;
   background-color: #44a347;
   border-radius: 10px;
   align-items: center;
+}
+
+/*modal-delete */
+.modalDelete {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+.modalcontainer{
+  padding: 10px;
+  border-radius: 30px;
+  background-color: #44a347;
+  border: 6px solid wheat;
+}
+.yesbtn:hover {
+  background-color: #e60000;
+}
+.nobtn:hover {
+  background-color: wheat;
+}
+.modal-header-delete{
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.ybtn{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px 0 0 10px; 
+  height: 5px;
+}
+.close-btn{
+   font-size: 1.5rem;
+   font-weight: bold;
+   cursor: pointer;
+   border: none;
+   outline: none;
+   background: none;
+}
+/* log out */
+.modallogout{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+.logoutcontainer{
+  padding: 10px;
+  border-radius: 30px;
+  background-color: #44a347;
+  border: 6px solid wheat;
+}
+.buttons-logout{
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+.buttons-logout button {
+  width: 100px;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: white;
+  color: #44a347;
+  transition: background-color 0.3s;
+}
+.confirmbtn:hover {
+  background-color: #e60000;
+}
+.declinebtn:hover {
+  background-color: wheat;
+}
+.modal-header-logout{
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.a-btn-container{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px 0 0 10px; 
+  height: 5px;
+}
+.abtn{
+   font-size: 1.5rem;
+   font-weight: bold;
+   cursor: pointer;
+   border: none;
+   outline: none;
+   background: none;
+}
+.abtn:hover{
+  transform: scale(1.05);
 }
