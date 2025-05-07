@@ -124,7 +124,7 @@ padding-left: 10px;
   display: inline-block;
   align-items: center;
   justify-content: center;
-  position: fixed;
+  position:absolute;
 }
 .maincontent{
   display: inline-flex;
@@ -140,7 +140,7 @@ padding-left: 10px;
   width: 750px;
   min-height:auto;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 30px;
 }
 .ddblcontent{
   display:flex;
@@ -214,6 +214,7 @@ padding-left: 10px;
   .user-table tbody tr:hover {
   background-color: wheat;
   }
+  
   .spacerdiv{
     width: 810px;
     height: 1px;
@@ -240,6 +241,22 @@ padding-left: 10px;
   border-radius: 10px;
   background-color: #44a347;
   padding: 10px;
+}
+.btn {
+  width: 80px;
+  padding: 6px 12px;
+  margin: 2px;
+  border: none;
+  border-radius: 90px;
+  cursor: pointer;
+  color: #F5F5DC;
+}
+.edit-btn {
+  background-color: #4CAF50;
+}
+.edit-btn:has-slotted{
+   background-color: wheat;
+   transform: scale(1.005rem);
 }
 .tableddbl{
   padding: 10px;
@@ -268,4 +285,366 @@ padding-left: 10px;
   height: 150px;
   border-radius: 10px;
   background-color: white;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  justify-content: flex-start;
+  background-color: #44a347;
+  color: #E6F0DC;
+  border-radius: 20px;
+  width: auto;
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); */
+  position: relative;
+  border: 5px solid wheat
+}
+.modal h2 {
+  text-align: start;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.modal label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.modal input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #44a347;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.modal button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: 'Roboto', sans-serif;
+}
+
+.submit-btn {
+  background-color: white;
+  color: #44a347;
+}
+
+.submit-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 40px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.imgcontainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.booksimg{
+  width: 120px;
+  height: 200px;
+}
+.booksdetails{
+gap: 3rem;
+padding: 20px;
+text-align: justify;
+color: #E6F0DC;
+width: auto;
+height: auto;
+}
+p,h2{
+ padding: 2px;  
+}
+.leftpanel{
+width: 150px;
+height: 400px;
+}
+
+.rent-buttons{
+padding: 10px;
+display: block;
+align-items: center;
+justify-content: center;
+}
+.rent-buttons button{ 
+margin: 10px;
+padding: 10px;
+border: none;
+width: 100px;
+height: 40px;
+color: #E6F0DC;
+background: #265527;
+cursor: pointer;
+border-radius: 50rem;
+display: block;
+align-items: center;
+justify-content: center;
+}
+.rent-buttons button:hover {
+background-color: rgb(224, 204, 165);
+transform: scale(1.1); /* Scale up on hover */
+}
+.modal-header{
+  padding: 20px;
+}
+.a-btn-container{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px 0 0 10px; 
+  height: 5px;
+}
+.abtn{
+   font-size: 1.5rem;
+   font-weight: bold;
+   cursor: pointer;
+   border: none;
+   outline: none;
+   background: none;
+}
+.abtn:hover{
+  transform: scale(1.05);
+}
+.bookcontent{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.containermodal{
+  display:  flex;
+  align-items: center;
+  justify-content: center;
+}
+.maincontainermodal{
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  background-color: #4caf4f;
+  width: auto;
+  height: auto;
+  border-radius: 20px;
+}
+.booksdetails{
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  margin-bottom: auto;
+}
+.xbtn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.close-btn{
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+.close-btn:hover {
+  transform: scale(1.5);
+} 
+
+    .modal h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .modal-overlay-rent label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    .modal-overlay-rent input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: #44a347;
+    }
+
+    .rent-button-group{
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .rent-button-group button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      font-family: 'Roboto', sans-serif;
+    }
+    .rent-submit-btn:hover{
+      background-color: wheat;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      background: #fff;
+      padding: 10px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      margin-top: 10px;
+    }
+
+    .user-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .user-table th,
+    .user-table td {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 20px;
+      color: #fff;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+
+
+    .modal-overlay-rent{
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal-rent{
+      background-color: #44a347;
+      color: #E6F0DC;
+      padding: 30px 40px;
+      border-radius: 20px;
+      width: 350px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      position: relative;
+      border: 4px solid wheat; 
+    }
+
+    .modal-rent h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .modal-rent label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    .modal-rent input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .rent-button-group{
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .rent-submit-btn{
+      padding: 10px 20px;
+      border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: 'Roboto', sans-serif;
+  color:#44a347 ;
+  width: 90px;
+}
+.rent-submit-btn:hover {
+  background-color:wheat;
+}
+.rent-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.rent-close-btn:hover {
+  transform: scale(1.5);
+}
+.rented-books{
+  background-color: white;
+  padding: 10px;
+  width: auto;
+  min-height: 100px;
+  border-radius: 10px;
 }

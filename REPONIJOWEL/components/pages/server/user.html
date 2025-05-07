@@ -5,53 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Southern Philippines Institute of Science & Technology</title>
 
-  <!-- icon -->
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="/REPONIJOWEL/ASSETS/imgFolder/school-logo-large.png" />
 
-  <!--  CSS -->
+  <!-- CSS -->
   <link rel="stylesheet" href="/REPONIJOWEL/ASSETS/cssFolder/user.css" />
 
   <!-- Google Material Symbols -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
   <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
+  <!-- Roboto Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-<!-- strart of Header -->
-     <header>
-      <div class="header-container">
-        <img src="/REPONIJOWEL/ASSETS/imgFolder/school-logo-large.png" alt="School Logo" style="height: 40px; margin-right: 10px;" />
-        <p>Southern Philippines Institute of Science & Technology</p>
-      </div>
-    </header>
-<!-- end of Header -->
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <img src="/REPONIJOWEL/ASSETS/imgFolder/school-logo-large.png" alt="School Logo" style="height: 40px; margin-right: 10px;" />
+      <p>Southern Philippines Institute of Science & Technology</p>
+    </div>
+  </header>
 
- <!-- admin profile-->
- <aside class="sidebar">
-  <div class="admincontiner">
-   <div class="admin-profile">
-     <div class="pin">
-      <div class="pcontainer">
-        <span class="material-symbols-outlined" style="color: black;">account_circle</span>
-      </div>
-        <div class="usrnm">
-          <h1 style="font-weight:bolder; font-size: 20px;">Admin Doe</h1>
-        </div>
-     </div>
-      <div class="white"></div>
-   </div>
-  </div> 
-  
   <!-- Sidebar -->
-  <div class="sidebar-container">
-    <nav class="nav">
-      <ul>
+  <aside class="sidebar">
+    <div class="admincontiner">
+      <div class="admin-profile">
+        <div class="pin">
+          <div class="pcontainer">
+            <span class="material-symbols-outlined" style="color: black;">account_circle</span>
+          </div>
+          <div class="usrnm">
+            <h1 style="font-weight: bold; font-size: 20px;">Admin Doe</h1>
+          </div>
+        </div>
+        <div class="white"></div>
+      </div>
+    </div> 
+
+    <div class="sidebar-container">
+      <nav class="nav">
+        <ul>
           <li>
             <a href="/REPONIJOWEL/components/pages/server/user.html"><span class="material-symbols-outlined">person</span> User</a>
           </li>
@@ -59,203 +56,147 @@
             <a href="/REPONIJOWEL/components/pages/server/admin.html"><span class="material-symbols-outlined">admin_panel_settings</span> Admin</a>
           </li>
           <li>
-            <a href="/REPONIJOWEL/components/pages/server/books.html"><span class="material-symbols-outlined">book</span> Books</a>
-          </li>
+            <a href="/REPONIJOWEL/components/pages/server/books.html"><span class="material-symbols-outlined">book</span> Books</a></li>
           <li>
-            <a href="#" onclick="showLogoutModal()"><span class="material-symbols-outlined">logout</span> Log out</a>
+            <a href="#" onclick="showLogoutModal() "><span class="material-symbols-outlined">logout</span> Log out</a>
           </li>
-      </ul>
-    </nav>
-  </div>
-</aside> 
+        </ul>
+      </nav>
+    </div>
+  </aside>
 
-<main class="container">
-  <!-- Start of maincontent -->
+  <main class="container">
     <div class="maincontent">
-
-  <!-- start of adminprofile -->
       <div class="adminprofile">
-        <h1>USER: </h1>
-
-  <!-- start of adminprofilebtn -->
-      <div class="emailcontainer">
-         <div class="emaildiv">
-         </div>
-      </div>
-  <!-- end of adminprofilebtn -->
-
-      </div>
-  <!-- end of adminprofile -->
-
-  <!-- start of Spacee div -->
-        <div class="spacecontainer">
-          <div class="spacerdiv"></div>
+        <h1>User:</h1>
+        <div class="emailcontainer">
+          <div class="emaildiv"></div>
         </div>
-  <!-- end of Spacee div -->
+      </div>
 
-  <!--start of table-wrappper -->
-  <div class="table-wrappper">
-  <!-- start of  table -->
-  <div class="table-wrapper">
-    <table class="user-table">
-      <thead>
-        <tr>
-          <td>&nbsp;</td>
-          <td>Book title</td>
-          <td>Book id </td>
-          <td>Book genre</td>
-          <td>Book status</td>
-          <td>Rented by</td>
-          <td>Action</td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <input type="checkbox">
-         </td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>
-            <button class="btn edit-btn" onclick="showBookuser()">View</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <!-- end of table -->
+      <div class="spacecontainer">
+        <div class="spacerdiv"></div>
+      </div>
+
+      <div class="table-wrappper">
+        <div class="table-wrapper">
+          <table class="user-table">
+            <thead>
+              <tr>
+                <td>Book title</td>
+                <td>Book ID</td>
+                <td>Book genre</td>
+                <td>Book status</td>
+                <td>Rented by</td>
+                <td>Action</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <button class="btn edit-btn" onclick="showBookuser() ">View</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
-  <!-- end of table  -->
-    </div>
-  <!-- end of maincontent -->
-</main>
+  </main>
 
-
-<!-- modal userinfo -->
-  <div class="modal-overlay" id="modal-admin-user"> 
-    <div class="modal">
-
+  <!-- User Modal -->
+  <div class="modalDelete" id="modal-admin-user">
+    <div class="modalcontainer">
       <div class="close-btn-container">
-        <button onclick="closeModal()" class="close-btn">&times;</button>
+        <button onclick="closeBookuser()" class="close-btn">&times;</button>
       </div>
 
       <div class="contentareauser">
         <h1>User:</h1>
-  <!-- spacecontainer start -->
-      <div class="spacecontainer">
-        <div class="spacerdiv"></div>
+
+        <div class="spacecontainer">
+          <div class="spacerdiv"></div>
+        </div>
+
+        <div class="infosection">
+          <div class="stdidcontainer">
+            <div class="studidname" style="font-weight: bold; color: #2e7d32;">Student ID:</div>
+            <div class="studid"><span style="color: #2e7d32;">c22-4587-01</span></div>
+          </div>
+
+          <div class="userinfocontainer">
+            <div class="userprofile" style="padding: 10px;">
+              <div class="photocontainer">
+                <div class="photo"><span class="material-symbols-outlined">person_add</span></div>
+              </div>
+              <div class="usernamecontainer">
+                <div class="username" style="gap: 5px;">
+                  <h2 style="color: #44a347; margin: 0;">John Doe</h2>
+                  <hr style="background-color: #44a347; height: 1px; width: 200px;">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="userpersonalinfo">
+            <div class="ayc">
+              <div class="ageacontainer">
+                <div class="age" style="font-weight: bold; color: #44a347;">Age:</div>
+                <div class="agediv"></div>
+              </div>
+            </div>
+
+            <div class="YearCourse-container">
+              <div class="YearCourse" style="font-weight: bold; color: #44a347;">Year & Course:</div>
+              <div class="YearCoursediv"></div>
+            </div>
+          </div>
+
+          <div class="emuser">
+            <div class="emailcontaineruser">
+              <div class="email" style="font-weight: bold; color: #44a347;">Email:</div>
+              <div class="emaildivuser"></div>
+            </div>
+
+            <div class="usernamecontainer">
+              <div class="username" style="font-weight: bold; color: #44a347;">Username:</div>
+              <div class="usernamediv"></div>
+            </div>
+          </div>
+
+          <div class="bookrentedcontainer">
+            <div class="bookrented" style="font-weight: bold; color: #44a347;">Book Rented:</div>
+            <div class="bookrenteddiv"></div>
+          </div>
+        </div>
       </div>
-  <!-- spacecontainer end -->
-
-  <!-- infosection start -->
-      <div class="infosection">
-
-  <!-- stdidcontainer start -->
-    <div class="stdidcontainer">
-      <div class="studidname" style="font-weight: bold; color: #2e7d32;">Student id: </div>
-      <div class="studid"><span style="font-weight: 50; color: #2e7d32;"> c22-4587-01</span></div>
     </div>
-  <!-- stdidcontainer end -->
+  </div>
 
-  <!-- userinfo start -->
-    <div class="userinfocontainer">
+  <!-- Logout Modal -->
+  <div class="modallogout" id="logoutModal">
+    <div class="logoutcontainer">
+      <div class="a-btn-container">
+        <button onclick="closeLogoutModal()" class="abtn">&times;</button>
+      </div>
 
-  <!-- userprofile start -->
-    <div class="userprofile" style="padding: 10px;">
+      <div class="modal-header-logout">
+        <div class="title-logout"><p>Are you sure you want to log out?</p></div>
+      </div>
 
-  <!-- photocontainer Start -->
-    <div class="photocontainer">
-  <!-- photodiv Start -->
-     <div class="photo"><span class="material-symbols-outlined">person_add</span></div>
-  <!-- photodiv end-->
-    </div>
-  <!-- photocontainer end -->
-
-  <!-- user name  start-->
-    <div class="usernamecontainer">
-      <div class="username" style="gap: 5px;">
-        <h2 style="color: #44a347; margin: 0;">John Doe</h2>
-        <hr style="background-color: #44a347; padding: 0.5px; width: 200px;">
+      <div class="buttons-logout">
+        <button onclick="logout()" class="confirmbtn">Yes</button>
+        <button onclick="closeLogoutModal()" class="declinebtn">No</button>
       </div>
     </div>
-  <!-- user name  end-->
-    </div>
-  <!-- userprofile end -->
-    </div>
-  <!--end of infosection-->
-
-  <!-- userpersonalinfo start -->
-  <div class="userpersonalinfo">
-
-  <!-- start of ageyearcorse -->
-  <div class="ayc">
-
-  <!-- agecontainer start -->
-  <div class="ageacontainer">
-    <div class="age" style="font-weight: bold; color: #44a347;">Age: </div>
-    <div class="agediv"></div>
-  </div>
-  <!-- agecontainer end -->
-  </div>
-  <!-- userpersonalinfo end -->
-
-  <!-- start of Year&Course -->
-  <div class="YearCourse-container">
-    <div class="YearCourse" style="font-weight: bold; color: #44a347;">Year&Course: </div>
-    <div class="YearCoursediv"></div>
-  </div>
-  <!-- end of Year&Course -->
-  </div>
-  <!-- end of ageyearcorse -->
-
-  <!-- start  emuser-->
-  <div class="emuser">
-
-  <!-- start of email -->
-  <div class="emailcontaineruser">
-    <div class="email" style="font-weight: bold; color: #44a347;">Email: </div>
-    <div class="emaildivuser"></div>
-  </div>
-  <!-- end of email -->
-
-  <!-- start of username -->
-  <div class="usernamecontainer">
-    <div class="username" style="font-weight: bold; color: #44a347;">Username: </div>
-    <div class="usernamediv"></div>
-  </div>
-  <!-- end of username -->
-
-  </div>
-  <!-- start  emuser-->
-  <div class="bookrentedcontainer">
-    <div class="bookrented" style="font-weight: bold; color: #44a347;">Book rented: </div>
-    <div class="bookrenteddiv"></div>
   </div>
 
-  </div> <!--end of maincontent-->
-    </div>
-  </div> 
-
-<!-- log out -->
-<div class="modallogout" id="logoutModal">
-  <div class="logoutcontainer">
-    
-   <div class="a-btn-container">
-     <button onclick="closeModal()" class="abtn">&times;</button>
-   </div>
- 
-   <div class="modal-header-logout" >
-     <div class="title-logout"><p>Are sure you want to log out ?</p></div>
-   </div>
-    <div class="buttons-logout">
-     <button onclick="logout()" class="confirmbtn">Yes</button>
-     <button onclick="closeModal()" class="declinebtn">No</button>
-    </div>
-   </div>
- 
-  <script src="/REPONIJOWEL/jsfolder/user.js"></script>
+  <!-- JS -->
+  <script src="/REPONIJOWEL/jsfolder/serverjs.js"></script>
 </body>
 </html>

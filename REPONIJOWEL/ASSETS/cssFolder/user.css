@@ -4,27 +4,27 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
   color: #F5F5DC;
-  
-}
-body {
-  background: url(/REPONIJOWEL/ASSETS/imgFolder/schoolppp.png)  no-repeat center center;
-  background-size: cover;
-  min-height: 100vh;
-  font-family: sans-serif;  
 }
 
+body {
+  background: url(/REPONIJOWEL/ASSETS/imgFolder/schoolppp.png) no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  font-family: sans-serif;
+  animation: fadeInPage 1s ease-in-out forwards;
+}
 /* Header */
 .header-container {
   background-color: #44a347;
-  text-shadow: 1px 1px 5px #000;
-  color: #F5F5DC;
-  padding: 20px;
-  font-size: 24px;  
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-}
-/* Admin Container */
+    text-shadow: 1px 1px 5px #000;
+    color: #F5F5DC;
+    padding: 20px;
+    font-size: 24px;  
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  /* Admin Container */
 .admincontiner{
   display: flex;
   align-items: center;
@@ -39,12 +39,12 @@ body {
   width: 200px;
   border-radius: 2rem;  
 }
-.emailcontainer{
-  display: flex;
+.emailcontainerheader{
+  display: block;
   align-items: center;
   justify-content: flex-start;
 }
-.emaildiv{
+.emaildivheader{
   height: 15px;
   width: 200px;
   border-radius: 20px;
@@ -131,60 +131,59 @@ padding-left: 5px;
   background-color: #2e7d32;
   color: #ffffff;
 }
-
-.container{
-padding: 20px 0 0;
-display: inline-block;
-align-items: center;
-justify-content: center;
-position: absolute;
-}
-.maincontent{
-width: 870px;
-min-height: auto;
-background-color: #4caf4f;
-border-radius: 40px;
-display: flex;
-padding: 20px;
-color: white;
-display: block;
-justify-content: space-between;
-}
-.adminprofile{
-display: block;
-align-items: center;
-justify-content: space-between;
+.container {
+  padding: 20px 0 0;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
 }
 
-.spacerdiv{
-background-color: white;
-width: 810px;
-height: 1px;
+.maincontent {
+  width: 870px;
+  min-height: auto;
+  background-color: #4caf4f;
+  border-radius: 40px;
+  display: flex;
+  padding: 20px;
+  color: white;
+  display: block;
+  justify-content: space-between;
+}
+.adminprofile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-}
-.spacecontainer{
-padding: 10px;
+.add-admin {
+  padding: 10px;
+  background-color: #44a347;
+  width: 130px;
+  border: none;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-.table-wrapper {
-  overflow-x: auto;
-  background: #fff;
-  padding: 16px 0 0 0;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  }
-  
-.user-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 5px;
-  height: 350px;
+.add-admin:hover {
+  background-color: wheat;
+  transform: scale(1.05);
 }
-.user-table thead {
-  background-color: #ce0101;
-  color:#4caf4f ;
+
+.spacerdiv {
+  background-color: white;
+  width: 810px;
+  height: 1px;
+}
+
+.spacecontainer {
   padding: 10px;
 }
+
 .btn {
   width: 80px;
   padding: 6px 12px;
@@ -193,19 +192,55 @@ padding: 10px;
   border-radius: 90px;
   cursor: pointer;
   color: #F5F5DC;
+  transition: opacity 0.3s, transform 0.3s;
 }
+
 .edit-btn {
   background-color: #4CAF50;
 }
+
+.delete-btn {
+  background-color: #f44336;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  background: #fff;
+  padding: 16px 0 0 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 5px;
+  height: 360px;
+  }
+.user-table thead {
+  background-color: #ce0101;
+  color: #4caf4f;
+  padding: 10px;
+}
+
 .user-table th,
 .user-table td {
   padding: 10px 10px;
   text-align: center;
+  border-bottom: 1px solid #685f5f;
 }
+
 .user-table tbody tr:hover {
   background-color: wheat;
   transform: scale(00.5rem);
-}
+  }
+
+/* Modal overlay */
 .modal-overlay{
   position: fixed;
   top: 0;
@@ -429,33 +464,6 @@ padding: 10px;
   border-radius: 30px;
   background-color: #44a347;
   border: 6px solid wheat;
-}
-.yesbtn:hover {
-  background-color: #e60000;
-}
-.nobtn:hover {
-  background-color: wheat;
-}
-.modal-header-delete{
-  display: flex;
-  align-items:center;
-  justify-content: space-between;
-  padding: 20px;
-}
-.ybtn{
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 10px 0 0 10px; 
-  height: 5px;
-}
-.close-btn{
-   font-size: 1.5rem;
-   font-weight: bold;
-   cursor: pointer;
-   border: none;
-   outline: none;
-   background: none;
 }
 /* log out */
 .modallogout{

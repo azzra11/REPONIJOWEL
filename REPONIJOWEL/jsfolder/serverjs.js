@@ -1,8 +1,12 @@
-function closeModal() {
+  function closeModal() {
     document.getElementById('bookModal').style.display = 'none';
     document.getElementById('bookedit').style.display = 'none';
     document.getElementById('modalDelete').style.display = 'none';
-    document.getElementById('logoutModal').style.display = 'none';
+  }
+  function closeModaladmin() {
+    document.getElementById('adminModal').style.display = 'none';
+    document.getElementById('adminEdit').style.display = 'none';
+    document.getElementById('modalDelete').style.display = 'none';
   }
   function confirmDelete() {
     document.getElementById('modalDelete').style.display = 'flex';
@@ -13,11 +17,20 @@ function closeModal() {
   function showBookedit() {
     document.getElementById('bookedit').style.display = 'flex';
   }
+  function showBookuser() {
+    document.getElementById('modal-admin-user').style.display = 'flex';
+   }
+  function closeBookuser() {
+    document.getElementById('modal-admin-user').style.display = 'none';
+  }
   function showLogoutModal() {
     document.getElementById('logoutModal').style.display = 'flex';
   }
+  function closeLogoutModal() {
+    document.getElementById('logoutModal').style.display = 'none';
+  }
   function logout() {
-    closeModal();
+    closeLogoutModal();
     setTimeout(() => {
       window.location.href = '/REPONIJOWEL/components/modals/login1.html'; // Change this to the desired URL
     }, 1000); // Delay in milliseconds (1 second)
@@ -59,3 +72,33 @@ function closeModal() {
     document.querySelector('#bookModal .submit-btn').addEventListener('click', handleDone);
     document.querySelector('#bookModal .delete-btn').addEventListener('click', handleDelete);
   });
+
+  document.getElementById('showPassword').addEventListener('change', function () {
+    const passwordField = document.getElementById('password');
+    const confirmPasswordField = document.getElementById('Cpassword');
+  
+    const type = this.checked ? 'text' : 'password';
+  
+    if (passwordField) passwordField.type = type;
+    if (confirmPasswordField) confirmPasswordField.type = type;
+  });
+  
+  document.getElementById('showPasswordEdit').addEventListener('change', function () {
+    const passwordField = document.getElementById('passwordEdit');
+    const confirmPasswordField = document.getElementById('CpasswordEdit');
+  
+    const type = this.checked ? 'text' : 'password';
+  
+      if (passwordField) passwordField.type = type;
+      if (confirmPasswordField) confirmPasswordField.type = type;
+    });
+    function showModal() {
+      document.getElementById('adminModal').style.display = 'flex';
+     }
+     function showModalEdit() {
+       document.getElementById('adminEdit').style.display = 'flex';
+     }
+     function modalDelete() {
+       document.getElementById('modalDelete').style.display = 'flex';
+     }
+   

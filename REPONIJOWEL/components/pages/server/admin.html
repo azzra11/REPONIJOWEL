@@ -137,7 +137,7 @@
     <div class="modal">
 
       <div class="xbtn">
-        <button onclick="closeModal()" class="close-btn">&times;</button>
+        <button onclick="closeModaladmin() " class="close-btn">&times;</button>
       </div>
 
       <div class="modal-header" >
@@ -169,7 +169,7 @@
         </label>
       </div>
 
-      <button type="submit" onclick="closeModal()" class="done-btn">Done</button>
+      <button type="submit" onclick="closeModaladmin() " class="done-btn">Done</button>
     </div>
   </div>
 
@@ -178,7 +178,7 @@
     <div class="modal">
 
       <div class="xbtn">
-        <button onclick="closeModal()" class="close-btn">&times;</button>
+        <button onclick="closeModaladmin() " class="close-btn">&times;</button>
       </div>
 
       <div class="modal-header" >
@@ -210,7 +210,7 @@
         </label>
       </div>
 
-      <button type="submit" onclick="closeModal()" class="done-btn">Change</button>
+      <button type="submit" onclick="closeModaladmin() " class="done-btn">Change</button>
     </div>
   </div>
 
@@ -219,7 +219,7 @@
   <div class="modalcontainer">
 
    <div class="ybtn">
-     <button onclick="closeModal()" class="close-btn">&times;</button>
+     <button onclick="closeModaladmin() " class="close-btn">&times;</button>
    </div>
 
    <div class="modal-header-delete" >
@@ -229,13 +229,31 @@
 
      </div>
     <div class="buttons-delete">
-     <button onclick="closeModal()" class="yesbtn">Yes</button>
-     <button onclick="closeModal()" class="nobtn">No</button>
+     <button onclick="closeModaladmin() " class="yesbtn">Yes</button>
+     <button onclick="closeModaladmin() " class="nobtn">No</button>
     </div>
    </div>
  </div>
- 
-<script src="/REPONIJOWEL/jsfolder/admin.js"></script>
+
+   <!-- log out -->
+   <div class="modallogout" id="logoutModal">
+    <div class="logoutcontainer">
+      
+     <div class="a-btn-container">
+       <button onclick="closeLogoutModal()" class="abtn">&times;</button>
+     </div>
+   
+     <div class="modal-header-logout" >
+       <div class="title-logout"><p>Are sure you want to log out ?</p></div>
+     </div>
+      <div class="buttons-logout">
+       <button onclick="logout()" class="confirmbtn">Yes</button>
+       <button onclick="closeLogoutModal()" class="declinebtn">No</button>
+      </div>
+     </div>
+   </div>
+
+<script src="/REPONIJOWEL/jsfolder/serverjs.js"></script>
 
 </body>
 </html>
